@@ -1,0 +1,61 @@
+<nav class="nav-container">
+  <div class="left-section">
+    <div class="language-switch">
+      <button class="switch-btn">
+        <span class="active">EN</span>
+        <span>DE</span>
+      </button>
+    </div>
+
+    <ul class="menu-items">
+      <li *ngFor="let item of menuItems; let i = index">
+        <a [href]="item.href" 
+           class="menu-link"
+           [class.active]="item.active"
+           (click)="setActiveItem(i)">
+          {{ item.label }}
+          <span class="hover-dot"></span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="logo">
+    <img src="assets/logos/mg-logo -main.png" alt="Logo">
+  </div>
+</nav>
+
+<div class="hero-content">
+  <h1 class="title">Frontend Developer</h1>
+  <h2 class="name">MarZieh GhaSedian</h2>
+  
+  <div class="cta-buttons">
+    <button class="btn-primary">Check my work</button>
+    <button class="btn-secondary">Contact me</button>
+  </div>
+
+  
+  <div class="social-links">
+    <div class="email">marzighased&commat;gmail.com</div>
+    <a href="https://github.com/yourusername" class="social-link">
+      <i class="fab fa-github"></i>
+    </a>
+    <a href="https://linkedin.com/in/yourusername" class="social-link">
+      <i class="fab fa-linkedin"></i>
+    </a>
+    
+  </div>
+
+  
+  <div class="scrolling-banner">
+    <div class="scrolling-text">
+      <span>Available for remote work</span>
+      <span class="dot">•</span>
+      <span>Frontend Developer</span>
+      <span class="dot">•</span>
+      <span>Based in Magdeburg</span>
+      <span class="dot">•</span>
+      <span>Open to opportunities</span>
+    </div>
+  </div>
+</div>

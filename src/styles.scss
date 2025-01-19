@@ -1,1 +1,45 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(
+      90deg,
+      #1C1C1C 0%,
+      #08463B 100%
+    );
+  }
+  
+  
+  @font-face {
+    font-family: "Fira Code";
+    src: url('/assets/fonts/FiraCode-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: "Fira Code";
+    src: url('/assets/fonts/FiraCode-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 700;
+  }
+  
+  @font-face {
+    font-family: "Karla";
+    src: url('/assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 400;
+  }
+  
+  @font-face {
+    font-family: "Karla";
+    src: url('/assets/fonts/Karla-VariableFont_wght.ttf') format('truetype');
+    font-display: swap;
+    font-weight: 700;
+  }
