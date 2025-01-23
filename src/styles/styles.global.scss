@@ -1,5 +1,52 @@
-
-$primary-green: #4ECCA3;
-$dark-green: #08463B;
-$bg-dark: #1C1C1C;
-$text-light: #E5E5E5;
+@mixin fira {
+    font-family: 'Fira Code', monospace;
+    color: #E5E5E5;
+  }
+  
+  @mixin karla {
+    font-family: 'Karla', sans-serif;
+    color: #E5E5E5;
+  }
+  
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @mixin flex-column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  @mixin hover-dot {
+    .hover-dot {
+      position: absolute;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #3ed0b2;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+  
+    &:hover {
+      .hover-dot {
+        opacity: 1;
+      }
+    }
+  }
+  
+  
+  @mixin base-button {
+    font-family: 'Karla';
+    padding: 16px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    transition: border-color 0.3s ease;
+  }

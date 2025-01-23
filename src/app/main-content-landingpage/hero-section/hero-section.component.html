@@ -1,61 +1,123 @@
-<nav class="nav-container">
+<div class="hero-wrapper">
+ <nav class="nav-container">
   <div class="left-section">
     <div class="language-switch">
       <button class="switch-btn">
-        <span class="active">EN</span>
-        <span>DE</span>
+        <span class="lang-btn active">EN</span>
+        <span class="lang-btn">DE</span>
       </button>
     </div>
 
     <ul class="menu-items">
-      <li *ngFor="let item of menuItems; let i = index">
-        <a [href]="item.href" 
-           class="menu-link"
-           [class.active]="item.active"
-           (click)="setActiveItem(i)">
-          {{ item.label }}
-          <span class="hover-dot"></span>
-        </a>
-      </li>
+      @for (item of menuItems; track $index) {
+        <li>
+          <a [href]="item.href" 
+             class="menu-link"
+             [class.active]="item.active"
+             (click)="setActiveItem($index)">
+            {{ item.label }}
+            <span class="hover-dot"></span>
+          </a>
+        </li>
+      }
     </ul>
   </div>
 
   <div class="logo">
     <img src="assets/logos/mg-logo -main.png" alt="Logo">
   </div>
-</nav>
 
-<div class="hero-content">
+  <!-- Hamburger Menu -->
+  <div class="hamburger-menu" (click)="toggleMenu()">
+    <div class="hamburger-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+  </div>
+
+  <!-- 
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+    <ul class="menu-items">
+      @for (item of menuItems; track $index) {
+        <li>
+          <a [href]="item.href" 
+             class="menu-link"
+             [class.active]="item.active"
+             (click)="setActiveItem($index)">
+            {{ item.label }}
+            <span class="hover-dot"></span>
+          </a>
+        </li>
+      }
+    </ul>
+    
+    <div class="language-switch">
+      <button class="switch-btn">
+        <span class="lang-btn active">EN</span>
+        <span class="lang-btn">DE</span>
+      </button>
+    </div>
+  </div> -->
+ </nav>
+
+ <div class="hero-content">
   <h1 class="title">Frontend Developer</h1>
   <h2 class="name">MarZieh GhaSedian</h2>
   
   <div class="cta-buttons">
-    <button class="btn-primary">Check my work</button>
-    <button class="btn-secondary">Contact me</button>
+    <button class="btn-primary">
+      <span class="button-text">Check my work</span>
+    </button>
+    <button class="btn-secondary">
+      <span class="button-text">Contact me</span>
+    </button>
   </div>
 
-  
   <div class="social-links">
     <div class="email">marzighased&commat;gmail.com</div>
     <a href="https://github.com/yourusername" class="social-link">
       <i class="fab fa-github"></i>
+      <span class="hover-dot"></span>
     </a>
     <a href="https://linkedin.com/in/yourusername" class="social-link">
       <i class="fab fa-linkedin"></i>
+      <span class="hover-dot"></span>
     </a>
-    
   </div>
 
-  
+  <div class="side-line left">
+    <div class="capsule">
+      <div class="thin-arrow"></div>
+    </div>
+    <div class="vertical-line"></div>
+  </div>
+
+  <div class="side-line right">
+    <div class="vertical-line"></div>
+  </div>
+
   <div class="scrolling-banner">
-    <div class="scrolling-text">
-      <span>Available for remote work</span>
-      <span class="dot">•</span>
-      <span>Frontend Developer</span>
-      <span class="dot">•</span>
-      <span>Based in Magdeburg</span>
-      <span class="dot">•</span>
-      <span>Open to opportunities</span>
+    <div class="infinite-marquee">
+      <div class="marquee-content">
+        <span>Available for remote work</span>
+        <span class="dot">•</span>
+        <span>Frontend Developer</span>
+        <span class="dot">•</span>
+        <span>Based in Magdeburg</span>
+        <span class="dot">•</span>
+        <span>Open to opportunities</span>
+        <span class="dot">•</span>
+      </div>
+      
+      <div class="marquee-content">
+        <span>Available for remote work</span>
+        <span class="dot">•</span>
+        <span>Frontend Developer</span>
+        <span class="dot">•</span>
+        <span>Based in Magdeburg</span>
+        <span class="dot">•</span>
+        <span>Open to opportunities</span>
+      </div>
     </div>
   </div>
-</div>
+ </div>
+</div> 
