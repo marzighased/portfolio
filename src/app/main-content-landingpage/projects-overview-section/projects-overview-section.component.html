@@ -1,1 +1,78 @@
-<p>projects-overview-section works!</p>
+
+<section class="projects-section">
+    <div class="title-container">
+      <h2>Portfolio</h2>
+      <h3>Featured Projects</h3>
+      <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+    </div>
+  
+    <div class="projects-list">
+        @for (project of projects; track project.id) {
+          <div class="project-item" (click)="openProjectModal(project)">
+            <div class="content">
+              <div class="project-title">
+                {{ project.title }}
+                <img src="./../../../assets/icons/arrow_outward.png" alt="arrow" class="arrow-icon">
+              </div>
+              <div class="technologies">
+                @for (tech of project.technologies; track tech) {
+                  <span>{{ tech }}</span>
+                }
+              </div>
+            </div>
+            <div class="project-image-wrapper">
+              <div class="project-image">  
+                <img [src]="project.thumbnail" [alt]="project.title">
+              </div>
+              <div class="decorative-lines"></div> 
+            </div>
+          </div>
+        }
+    </div>
+  
+    @if (isModalOpen && selectedProject) {
+      <div class="modal-overlay">
+        <div class="modal-content">
+          <button class="close-btn" (click)="closeModal()">
+            <img src="./../../../assets/icons/close_small.png" alt="Close">
+          </button>
+  
+          <div class="project-details">
+            <div class="project-number">0{{ selectedProject.id }}</div>
+            <h2>{{ selectedProject.title }}</h2>
+            
+            <div class="project-description">
+              <h3>What is this project about?</h3>
+              <p>{{ selectedProject.description }}</p>
+            </div>
+  
+            <div class="tech-stack">
+              @for (tech of selectedProject.technologies; track tech) {
+                <img src="./../../../assets/icons/Property 1={{ tech }}.svg" [alt]="tech">
+              }
+            </div>
+  
+            <div class="action-buttons">
+              <a [href]="selectedProject.githubLink" target="_blank" class="btn">
+                GitHub
+                <img src="./../../../assets/icons/arrow-right.svg" alt="arrow">
+              </a>
+              <a [href]="selectedProject.liveLink" target="_blank" class="btn">
+                Live Test
+                <img src="./../../../assets/icons/arrow_forward.png" alt="arrow">
+              </a>
+            </div>
+  
+            <div class="project-image">
+              <img [src]="selectedProject.modalImage" [alt]="selectedProject.title">
+            </div>
+  
+            <button class="next-project" (click)="nextProject()">
+              Next project
+              <img src="./../../../assets/icons/arrow_forward.png" alt="arrow">
+            </button>
+          </div>
+        </div>
+      </div>
+    }
+</section>

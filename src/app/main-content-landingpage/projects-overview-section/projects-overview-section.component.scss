@@ -1,0 +1,415 @@
+@import './../../../styles/styles.global.scss';
+
+.projects-section {
+  padding: 4rem;
+  width: 1100px;
+  min-height: 100vh;
+  padding-left: 7rem;
+   
+  .title-container {
+    margin-bottom: 3rem;
+   
+    h2 {
+      @include karla;
+      color: #3ed0b2;
+      font-size: 20px;
+      margin-bottom: 0.5rem;
+    }
+   
+    h3 {
+      @include fira;
+      font-size: 50px;
+      color: #3ed0b2;
+      margin-bottom: 1rem;
+    }
+   
+    p {
+      @include karla;
+      font-size: 18px;
+      max-width: 500px;
+      color: #E5E5E5;
+    }
+  }
+   
+  .projects-list {
+    .project-item {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem 0;
+      border-bottom: 1px solid #3ED0B2;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      
+      .content {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        position: static;
+      }
+
+      &:hover {
+        background: rgba(62, 208, 179, 0.171);
+        
+        .project-title {
+          color: #E5E5E5;
+          
+          .arrow-icon {
+            opacity: 1;
+            transform: translateX(1px);
+          }
+        }
+
+        .project-image-wrapper {
+          opacity: 1;
+          
+          .decorative-lines {
+            opacity: 1;
+          }
+        }
+      }
+
+      .project-title {
+        @include fira;
+        font-weight: 700;
+        font-size: 30px;
+        color: #E5E5E5;
+        transition: all 0.4s ease;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding-left: 25px;  
+
+        .arrow-icon {
+          opacity: 0;
+          transform: translateX(-10px);
+          transition: all 0.4s ease;
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      .technologies {
+        position: absolute;
+        margin-top: 1rem;
+        justify-content: flex-end;
+        right: 25px;
+        display: flex;
+        gap: 12px;
+   
+        span {
+          @include karla;
+          font-size: 18px;
+          color: rgba(229, 229, 229, 0.8);
+        }
+   
+        span:not(:last-child)::after {
+          content: '|';
+          margin-left: 10px;
+          color: #3ed0b2;
+        }
+      }
+
+      .project-image-wrapper {
+        opacity: 0;
+        position: absolute;
+        right: -400px;
+        width: 300px;
+        height: 200px;
+        transition: all 0.5s ease;
+        
+        .project-image {
+          width: 100%;
+          height: 100%;
+          border-radius: 16px;
+          overflow: hidden;
+          position: relative;
+          z-index: 2;
+          
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+          }
+        }
+        
+        .decorative-lines {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 20px;
+          right: -25px;
+          z-index: 1;
+          opacity: 0;
+          transition: opacity 0.3s ease;
+          border-radius: 16px;
+          background: repeating-linear-gradient(
+            -45deg,
+            #3ed0b2,
+            #3ed0b2 1px,
+            transparent 1px,
+            transparent 12px
+          );
+        }
+      }
+    }
+  }
+     
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 2rem;
+     
+    .modal-content {
+      width: 1246px;
+      height: 768px;   
+      background-image: linear-gradient(45deg, #1c1c1c 50%, #08463B);
+      border: 1px solid #3ED0B2;
+      border-radius: 30px;
+      position: relative;
+      padding: 48px 60px;
+     
+      .close-btn {
+        position: absolute;
+        top: 80px;
+        right: 80px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        width: 20px;
+        height: 20px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+     
+        img {
+          width: 100%;
+          height: 100%;
+        }
+     
+        &:hover {
+          transform: scale(1.1);
+          filter: invert(82%) sepia(29%) saturate(794%) hue-rotate(116deg) brightness(88%) contrast(88%);
+        }
+      }
+     
+      .project-details {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+     
+        .project-number {
+          @include karla;
+          font-size: 140px;
+          font-weight: 700;
+          color: #3ED0B2;
+          line-height: 1;
+          margin-bottom: 8px;
+        }
+     
+        h2 {
+          @include fira;
+          font-size: 64px;
+          color: white;
+          margin-bottom: 32px;
+        }
+     
+        .project-description {
+          h3 {
+            @include fira;
+            font-size: 32px;
+            color: #3ED0B2;
+            margin-bottom: 16px;
+          }
+     
+          p {
+            @include karla;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 32px;
+            color: #E5E5E5;
+          }
+        }
+     
+        .tech-stack {
+          display: flex;
+          gap: 16px;
+          margin-bottom: 32px;
+     
+          img {
+            height: 40px;
+            width: auto;
+          }
+        }
+     
+        .action-buttons {
+          display: flex;
+          gap: 24px;
+          margin-bottom: 32px;
+     
+          .btn {
+            @include base-button;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
+            padding: 12px 32px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+     
+            img {
+              width: 24px;
+              height: 24px;
+              transition: transform 0.3s ease;
+            }
+     
+            &:hover {
+              border-color: #3ED0B2;
+              color: #3ED0B2;
+     
+              img {
+                transform: translateX(5px);
+                filter: invert(82%) sepia(29%) saturate(794%) hue-rotate(116deg) brightness(88%) contrast(88%);
+              }
+            }
+          }
+        }
+     
+        .project-image {
+          margin-top: auto;
+          border-radius: 20px;
+          overflow: hidden;
+   
+          img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+          }
+        }
+     
+        .next-project {
+          @include karla;
+          position: absolute;
+          bottom: 32px;
+          right: 48px;
+          background: transparent;
+          border: none;
+          color: #E5E5E5;
+          font-size: 18px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+     
+          img {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.3s ease;
+          }
+     
+          &:hover {
+            color: #3ED0B2;
+     
+            img {
+              transform: translateX(5px);
+              filter: invert(82%) sepia(29%) saturate(794%) hue-rotate(116deg) brightness(88%) contrast(88%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+   
+@media (max-width: 768px) {
+  .projects-section {
+    padding: 5rem 2rem;
+ 
+    .title-container {
+      h3 {
+        font-size: 40px;
+      }
+    }
+ 
+    .projects-list {
+      .project-item {
+        flex-direction: column;
+        gap: 2rem;
+ 
+        .project-title {
+          font-size: 24px;
+        }
+ 
+        .project-image-wrapper {
+          width: 100%;
+          margin-left: 0;
+        }
+      }
+    }
+ 
+    .modal-overlay {
+      .modal-content {
+        width: 90%;
+        height: 90vh;
+        padding: 24px;
+ 
+        .close-btn {
+          top: 24px;
+          right: 24px;
+        }
+ 
+        .project-details {
+          .project-number {
+            font-size: 80px;
+          }
+ 
+          h2 {
+            font-size: 32px;
+            margin-bottom: 24px;
+          }
+ 
+          .project-description {
+            h3 {
+              font-size: 24px;
+            }
+ 
+            p {
+              font-size: 16px;
+            }
+          }
+ 
+          .action-buttons {
+            flex-direction: column;
+            gap: 16px;
+ 
+            .btn {
+              width: 100%;
+              justify-content: center;
+            }
+          }
+ 
+          .next-project {
+            position: static;
+            margin-top: 24px;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
