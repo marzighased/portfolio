@@ -209,8 +209,15 @@
      
       .project-details {
         display: flex;
-        flex-direction: column;
-        height: 100%;
+        height: calc(100% - 80px);
+        gap: 60px;
+
+        .left-content {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          min-width: 0; 
+        }
      
         .project-number {
           @include karla;
@@ -218,14 +225,14 @@
           font-weight: 700;
           color: #3ED0B2;
           line-height: 1;
-          margin-bottom: 8px;
+          margin-bottom: -20px;
         }
      
         h2 {
           @include fira;
           font-size: 64px;
           color: white;
-          margin-bottom: 32px;
+          margin-bottom: 16px;
         }
      
         .project-description {
@@ -242,16 +249,17 @@
             line-height: 1.6;
             margin-bottom: 32px;
             color: #E5E5E5;
+            max-width: 60%;
           }
         }
      
         .tech-stack {
           display: flex;
-          gap: 16px;
-          margin-bottom: 32px;
+          gap: 24px;
+          margin: 16px 0 32px;
      
           img {
-            height: 40px;
+            height: 32px;
             width: auto;
           }
         }
@@ -259,13 +267,13 @@
         .action-buttons {
           display: flex;
           gap: 24px;
-          margin-bottom: 32px;
+          margin-top: auto;
      
           .btn {
             @include base-button;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 12px;
             font-size: 18px;
             padding: 12px 32px;
             transition: all 0.3s ease;
@@ -288,15 +296,16 @@
             }
           }
         }
+
+        .right-content {
+            flex: 1;
+            display: flex;
+            align-items: center;  
      
-        .project-image {
-          margin-top: auto;
-          border-radius: 20px;
-          overflow: hidden;
-   
-          img {
+         .project-image {
             width: 100%;
             height: auto;
+            border-radius: 20px;
             object-fit: cover;
           }
         }
@@ -308,7 +317,7 @@
           right: 48px;
           background: transparent;
           border: none;
-          color: #E5E5E5;
+          color: #3ED0B2;
           font-size: 18px;
           display: flex;
           align-items: center;
@@ -323,11 +332,11 @@
           }
      
           &:hover {
-            color: #3ED0B2;
+            color: #E5E5E5;
+            opacity: 0.9;
      
             img {
               transform: translateX(5px);
-              filter: invert(82%) sepia(29%) saturate(794%) hue-rotate(116deg) brightness(88%) contrast(88%);
             }
           }
         }
