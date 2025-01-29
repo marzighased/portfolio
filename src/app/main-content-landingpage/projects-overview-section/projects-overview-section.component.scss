@@ -204,6 +204,7 @@
         &:hover {
           transform: scale(1.1);
           filter: invert(82%) sepia(29%) saturate(794%) hue-rotate(116deg) brightness(88%) contrast(88%);
+          
         }
       }
      
@@ -233,6 +234,7 @@
           font-size: 64px;
           color: white;
           margin-bottom: 16px;
+          padding-top: 30px
         }
      
         .project-description {
@@ -257,6 +259,7 @@
           display: flex;
           gap: 24px;
           margin: 16px 0 32px;
+          padding-bottom: 30px;
      
           img {
             height: 32px;

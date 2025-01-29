@@ -51,18 +51,18 @@
 
                         <div class="tech-stack">
                             @for (tech of selectedProject.technologies; track tech) {
-                                <img src="./../../../assets/icons/Property 1={{ tech }}.svg" [alt]="tech">
+                                <img src="./../../../assets/green icons/Property 1={{ tech }}.svg" [alt]="tech">
                             }
                         </div>
 
                         <div class="action-buttons">
                             <a [href]="selectedProject.githubLink" target="_blank" class="btn">
                                 GitHub
-                                <img src="./../../../assets/icons/arrow-right.svg" alt="arrow">
+                                <img src="./../../../assets/icons/arrow_outward.svg" alt="arrow">
                             </a>
                             <a [href]="selectedProject.liveLink" target="_blank" class="btn">
                                 Live Test
-                                <img src="./../../../assets/icons/arrow_forward.png" alt="arrow">
+                                <img src="./../../../assets/icons/arrow_outward.svg" alt="arrow">
                             </a>
                         </div>
                     </div>

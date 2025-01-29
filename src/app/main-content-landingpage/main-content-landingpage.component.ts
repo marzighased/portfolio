@@ -4,11 +4,13 @@ import { HeroSectionComponent } from './hero-section/hero-section.component';
 import { AboutMeSectionComponent } from './about-me-section/about-me-section.component';
 import { SkillsSectionComponent } from './skills-section/skills-section.component';
 import { ProjectsOverviewSectionComponent } from './projects-overview-section/projects-overview-section.component';
+import { FeedbackSectionComponent } from './feedback-section/feedback-section.component';
 
 @Component({
   selector: 'app-main-content-landingpage',
   standalone: true,
-  imports: [CommonModule, HeroSectionComponent, AboutMeSectionComponent,SkillsSectionComponent, ProjectsOverviewSectionComponent],
+  imports: [CommonModule, HeroSectionComponent, AboutMeSectionComponent,SkillsSectionComponent, 
+    ProjectsOverviewSectionComponent, FeedbackSectionComponent],
   templateUrl: './main-content-landingpage.component.html',
   styleUrl: './main-content-landingpage.component.scss'
 })

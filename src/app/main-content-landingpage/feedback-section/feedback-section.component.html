@@ -1,1 +1,53 @@
-<p>feedback-section works!</p>
+<section class="feedback-section">
+    <div class="testimonials-container">
+      <h2 class="section-title">What my colleagues say about me</h2>
+      
+      <div class="testimonials-slider">
+        <div class="testimonials-track">
+          @for (testimonial of testimonials; track testimonial.id) {
+            <div class="testimonial-card" 
+                 [class.active]="currentIndex === testimonial.id - 1"
+                 [class.left]="isLeft(testimonial.id - 1)"
+                 [class.right]="isRight(testimonial.id - 1)">
+              <div class="quote">
+                <img src="./../../../assets/icons/quoted-passage_11889837.png" alt="Quote">
+              </div>
+              <p class="text">{{testimonial.text}}</p>
+              <div class="author">
+                <span class="name">{{testimonial.author}}</span>
+                <span class="role">- {{testimonial.role}}</span>
+              </div>
+            </div>
+          }
+        </div>
+        
+        <div class="navigation">
+          <button class="nav-btn prev" (click)="prevSlide()">
+            <img src="./../../../assets/icons/arrow_back.png" alt="Previous">
+          </button>
+          
+          <div class="indicators">
+            @for (testimonial of testimonials; track testimonial.id) {
+              <button class="indicator" 
+                      [class.active]="currentIndex === testimonial.id - 1"
+                      (click)="goToSlide(testimonial.id - 1)">
+              </button>
+            }
+          </div>
+          
+          <button class="nav-btn next" (click)="nextSlide()">
+            <img src="./../../../assets/icons/arrow_forward.png" alt="Next">
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <div class="contact-section">
+      <h3>Contact me</h3>
+      <h2>Let's work</h2>
+      <div class="input-group">
+        <label>What's your name?</label>
+        <input type="text" placeholder="Your name goes here">
+      </div>
+    </div>
+  </section>
