@@ -1,1 +1,63 @@
-<p>contact-me-section works!</p>
+<section class="contact-me-section">
+    <div class="content-wrapper">
+      <div class="text-column">
+        <h3 class="subtitle">Contact me</h3>
+        <h2 class="title">Let's work<br>together</h2>
+        
+        <div class="intro-text">
+          <p class="problem-text">Got a problem to solve?</p>
+          <p class="contact-description">Contact me through this form. I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.</p>
+          <p class="developer-text">Need a Frontend developer? <a href="#" class="talk-link">Let's talk!</a></p>
+        </div>
+      </div>
+  
+      <div class="form-column">
+        <div class="input-line"></div>
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-content">
+          <div class="form-group">
+            <label>What's your name?</label>
+            <input type="text" formControlName="name" placeholder="Your name goes here">
+            <div class="error-message" *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.errors?.['required']">
+              Oops! it seems your name is missing
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label>What's your email?</label>
+            <input type="email" formControlName="email" placeholder="youremail@email.com">
+            <div class="error-message" *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['required']">
+              Hoppla! your email is required
+            </div>
+            <div class="error-message" *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.errors?.['email']">
+              Please enter a valid email address
+            </div>
+          </div>
+  
+          <div class="form-group">
+            <label>How can I help you?</label>
+            <textarea formControlName="message" placeholder="Hello Marzi, I am interested in..."></textarea>
+            <div class="error-message" *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.errors?.['required']">
+              Please tell me about your project
+            </div>
+          </div>
+  
+          <div class="privacy-policy">
+            <label class="checkbox-container">
+              <input type="checkbox" formControlName="privacyPolicy">
+              <span class="checkmark"></span>
+              I've read the <a href="#" class="policy-link">privacy policy</a> and agree to the processing of my data as outlined.
+            </label>
+            <div class="error-message" *ngIf="showPrivacyError">
+              Please accept the privacy policy
+            </div>
+          </div>
+  
+          <div class="submit-btn-wrapper">
+            <button type="submit" class="submit-btn">
+              <span class="button-text">Say Hello ;)</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+</section>

@@ -1,0 +1,285 @@
+@import './../../../styles/styles.global.scss';
+
+.contact-me-section {
+  padding: 8rem 7rem;
+  
+  .content-wrapper {
+    max-width: 1246px;
+    margin: 0 auto;
+    display: flex;
+    gap: 220px;
+    justify-content: space-between;
+    position: relative;
+    
+    .text-column {
+      max-width: 470px;
+      
+      .subtitle {
+        @include karla;
+        color: #3ed0b2;
+        font-size: 25px;
+        margin-bottom: 1rem;
+      }
+      
+      .title {
+        @include fira;
+        color: #3ed0b2;
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        line-height: 1.2;
+      }
+
+      .intro-text {
+        margin-bottom: 3rem;
+
+        .problem-text {
+          @include fira;
+          color: #3ed0b2;
+          font-size: 1.25rem;
+          margin-bottom: 1.5rem;
+          font-weight: 600;
+        }
+
+        .contact-description {
+          @include karla;
+          color: #E5E5E5;
+          font-size: 1rem;
+          line-height: 1.6;
+          margin-bottom: 1.5rem;
+        }
+
+        .developer-text {
+          @include karla;
+          color: #E5E5E5;
+          font-size: 1rem;
+
+          .talk-link {
+            color: #3ed0b2;
+            text-decoration: none;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: lighten(#3ed0b2, 10%);
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    
+    .form-column {
+      flex: 1;
+      max-width: 600px;
+      position: relative;
+      
+      .input-line {
+        position: absolute;
+        top: -20px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: #3ed0b2;
+      }
+      
+      .form-content {
+        .form-group {
+          margin-bottom: 50px;
+          
+          label {
+            @include fira;
+            color: #3ed0b2;
+            display: block;
+            margin-bottom: 10pxrem;
+            font-size: 25px;
+          }
+          
+          input, textarea {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid #3ed0b2;
+            padding: 1rem;
+            color: #E5E5E5;
+            @include karla;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            
+            &::placeholder {
+              color: rgba(229, 229, 229, 0.5);
+            }
+            
+            &:focus {
+              outline: none;
+              border-color: #E5E5E5;
+            }
+          }
+          
+          textarea {
+            min-height: 100px;
+            resize: vertical;
+          }
+        }
+        
+        .error-message {
+          @include karla;
+          color: #ff4444;
+          font-size: 0.9rem;
+          margin-top: 0.5rem;
+          opacity: 0;
+          animation: fadeIn 0.3s ease forwards;
+        }
+        
+        .privacy-policy {
+          margin-bottom: 2rem;
+          
+          .checkbox-container {
+            @include karla;
+            color: #E5E5E5;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            
+            input[type="checkbox"] {
+              display: none;
+              
+              &:checked + .checkmark {
+                background-color: #3ed0b2;
+                border-color: #3ed0b2;
+                
+                &:after {
+                  opacity: 1;
+                }
+              }
+            }
+            
+            .checkmark {
+              width: 18px;
+              height: 18px;
+              border: 1px solid #3ed0b2;
+              border-radius: 3px;
+              position: relative;
+              transition: all 0.3s ease;
+              
+              &:after {
+                content: '';
+                position: absolute;
+                left: 6px;
+                top: 2px;
+                width: 5px;
+                height: 10px;
+                border: solid white;
+                border-width: 0 2px 2px 0;
+                transform: rotate(45deg);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+              }
+            }
+          }
+          
+          .policy-link {
+            color: #3ed0b2;
+            text-decoration: none;
+            
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .form-group:last-of-type {
+            margin-bottom: 32px; 
+        }
+  
+          .submit-btn-wrapper {
+            display: flex;
+            justify-content: center;
+            padding-left: 30px; 
+        }
+  
+        
+        .submit-btn {
+          @include base-button;
+          position: relative;
+          overflow: hidden;
+          padding: 13px 23px;
+          margin-top: 10px;
+          
+          
+          
+          .button-text {
+            display: inline-block;
+            transition: transform 0.7s ease, color 0.3s ease;
+            padding: 20 10px;
+            font-size: 18px;
+          }
+          
+          &:hover {
+            border-color: #3ed0b2;
+            
+            .button-text {
+              transform: translateX(-150%);
+              color: #3ed0b2;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-me-section {
+    padding: 3rem;
+    
+    .content-wrapper {
+      flex-direction: column;
+      gap: 3rem;
+      
+      .text-column,
+      .form-column {
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-me-section {
+    padding: 2rem;
+    
+    .content-wrapper {
+      .text-column {
+        .title {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-me-section {
+    padding: 1.5rem;
+    
+    .content-wrapper {
+      .text-column {
+        .title {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
