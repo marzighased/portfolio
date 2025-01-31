@@ -1,27 +1,27 @@
-import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-
-interface MenuItem {
-  label: string;
-  href: string;
-  active: boolean;
-}
+import { CommonModule } from '@angular/common';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './hero-section.component.html',
-  styleUrl: './hero-section.component.scss'
+  styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent {
   isMenuOpen = false;
+  currentLang: string;
 
-  menuItems: MenuItem[] = [
-    { label: 'About me', href: '#about', active: false },
-    { label: 'Skills', href: '#skills', active: false },
-    { label: 'Projects', href: '#projects', active: false }
+  menuItems = [
+    { label: 'NAV.ABOUT', href: '#about', active: false },
+    { label: 'NAV.SKILLS', href: '#skills', active: false },
+    { label: 'NAV.PROJECTS', href: '#projects', active: false }
   ];
+
+  constructor(private translate: TranslateService) {
+    this.currentLang = translate.currentLang || 'en';
+  }
 
   toggleMenu(): void {
     this.isMenuOpen = !this.isMenuOpen;
@@ -29,9 +29,13 @@ export class HeroSectionComponent {
 
   setActiveItem(index: number): void {
     this.menuItems.forEach((item, i) => {
-        item.active = i === index;
+      item.active = i === index;
     });
     this.isMenuOpen = false;
   }
-}
 
+  switchLanguage(lang: string): void {
+    this.currentLang = lang;
+    this.translate.use(lang);
+  }
+}

@@ -1,9 +1,9 @@
 <section class="projects-section">
     
     <div class="title-container">
-        <h2>Portfolio</h2>
-        <h3>Featured Projects</h3>
-        <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+        <h2>{{ 'PROJECTS.TITLE' | translate }}</h2>
+        <h3>{{ 'PROJECTS.SUBTITLE' | translate }}</h3>
+        <p>{{ 'PROJECTS.DESCRIPTION' | translate }}</p> 
     </div>
 
     
@@ -12,7 +12,7 @@
             <div class="project-item" (click)="openProjectModal(project)">
                 <div class="content">
                     <div class="project-title">
-                        {{ project.title }}
+                        {{ project.titleKey | translate }}
                         <img src="./../../../assets/icons/arrow_outward.png" alt="arrow" class="arrow-icon">
                     </div>
                     <div class="technologies">
@@ -23,7 +23,7 @@
                 </div>
                 <div class="project-image-wrapper">
                     <div class="project-image">
-                        <img [src]="project.thumbnail" [alt]="project.title">
+                        <img [src]="project.thumbnail" [alt]="project.titleKey | translate">
                     </div>
                     <div class="decorative-lines"></div>
                 </div>
@@ -42,11 +42,11 @@
                 <div class="project-details">
                     <div class="left-content">
                         <div class="project-number">0{{ selectedProject.id }}</div>
-                        <h2>{{ selectedProject.title }}</h2>
+                        <h2>{{ selectedProject.titleKey | translate }}</h2>
                         
                         <div class="project-description">
-                            <h3>What is this project about?</h3>
-                            <p>{{ selectedProject.description }}</p>
+                            <h3>{{ 'PROJECTS.ABOUT' | translate }}</h3>
+                            <p>{{ selectedProject.descriptionKey | translate }}</p>
                         </div>
 
                         <div class="tech-stack">
@@ -61,18 +61,18 @@
                                 <img src="./../../../assets/icons/arrow_outward.svg" alt="arrow">
                             </a>
                             <a [href]="selectedProject.liveLink" target="_blank" class="btn">
-                                Live Test
+                                {{ 'PROJECTS.LIVE' | translate }}
                                 <img src="./../../../assets/icons/arrow_outward.svg" alt="arrow">
                             </a>
                         </div>
                     </div>
 
                     <div class="right-content">
-                        <img [src]="selectedProject.modalImage" [alt]="selectedProject.title" class="project-image">
+                        <img [src]="selectedProject.modalImage" [alt]="selectedProject.titleKey | translate" class="project-image">
                     </div>
 
                     <button class="next-project" (click)="nextProject()">
-                        Next project
+                        {{ 'PROJECTS.NEXT' | translate }}
                         <img src="./../../../assets/icons/arrow_forward.png" alt="arrow">
                     </button>
                 </div>

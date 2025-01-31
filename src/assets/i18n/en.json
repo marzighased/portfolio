@@ -1,0 +1,103 @@
+{
+    "HERO": {
+      "TITLE": "Frontend Developer",
+      "NAME": "MarZieh GhaSedian",
+      "CHECK_WORK": "Check my work",
+      "CONTACT": "Contact me",
+      "EMAIL": "marzighased@gmail.com",
+      "BANNER": {
+        "REMOTE": "Available for remote work",
+        "DEVELOPER": "Frontend Developer",
+        "LOCATION": "Based in Magdeburg",
+        "OPPORTUNITIES": "Open to opportunities"
+      }
+    },
+    "NAV": {
+      "ABOUT": "About me",
+      "SKILLS": "Skills",
+      "PROJECTS": "Projects"
+    },
+    "ABOUT": {
+      "TITLE": "Who I Am",
+      "SUBTITLE": "About me",
+      "DESCRIPTION": "Hi, I'm a german speaking Frontend Developer based in Magdeburg. Motivated by the limitless opportunities within IT, I am excited about crafting visually captivating and intuitive websites and applications.",
+      "LOCATION": "Flexible in terms of working environments, I can work effectively both on-site in Magdeburg and remotely.",
+      "MINDSET": "I am open-minded and always looking for personal challenges to constantly improve my knowledge and skills.",
+      "APPROACH": "In my profession, programming isn't just about writing code; it's a creative form of problem-solving. I take pride in my ability to distill complex technical challenges into simple, user-friendly solutions. This way, I help you achieve your goals and bring your visions to life."
+    },
+    "SKILLS": {
+      "TITLE": "Technologies",
+      "SET_TITLE": "Skill Set",
+      "DESCRIPTION": "My journey has involved working on diverse projects, which has taught me invaluable lessons about problem-solving concepts. Through GR understanding new technologies and methodologies to Continuously enhance my skills and stay ahead in the ever-evolving landscape of web development.",
+      "NEED_SKILL": "You need",
+      "NEED_ANOTHER": "another skill?",
+      "CONTACT": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+      "LETS_TALK": "Let's Talk"
+    },
+    "PROJECTS": {
+      "TITLE": "Portfolio",
+      "SUBTITLE": "Featured Projects",
+      "DESCRIPTION": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+      "ABOUT": "What is this project about?",
+      "NEXT": "Next project",
+      "LIVE": "Live Test",
+      "JOIN": {
+      "TITLE": "Join",
+      "DESCRIPTION": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
+     },
+     "POLLO": {
+      "TITLE": "El Pollo Loco",
+      "DESCRIPTION": "Jump and run game based on object-oriented programming."
+     },
+     "BUBBLE": {
+      "TITLE": "DA Bubble",
+      "DESCRIPTION": "Angular-based chat application with real-time messaging."
+     }
+    },
+    "FEEDBACK": {
+      "TITLE": "What my colleagues say about me",
+      "TESTIMONIAL1": {
+      "TEXT": "I worked with Marzi in an efficient way",
+      "ROLE": "Front Developer"
+     },
+      "TESTIMONIAL2": {
+      "TEXT": "Marzi has proven to be a reliable group partner. Her technical skills and proactive approach were crucial to the success of our project.",
+      "ROLE": "Team Partner"
+     },
+      "TESTIMONIAL3": {
+      "TEXT": "I had the good fortune of working with Marzi on a project at the Developer Academy. She put a lot of effort into every task we worked on together and stayed focused throughout the project.",
+      "ROLE": "Project Manager"
+     }
+    },
+    "CONTACT": {
+      "TITLE": "Contact me",
+      "SUBTITLE": "Let's work together",
+      "PROBLEM": "Got a problem to solve?",
+      "DESCRIPTION": "Contact me through this form. I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+      "NEED_DEV": "Need a Frontend developer?",
+      "LETS_TALK": "Let's talk!",
+      "FORM": {
+        "NAME": "What's your name?",
+        "NAME_PLACEHOLDER": "Your name goes here",
+        "NAME_ERROR": "Oops! it seems your name is missing",
+        "EMAIL": "What's your email?",
+        "EMAIL_PLACEHOLDER": "youremail@email.com",
+        "EMAIL_ERROR": "Hoppla! your email is required",
+        "EMAIL_INVALID": "Please enter a valid email address",
+        "MESSAGE": "How can I help you?",
+        "MESSAGE_PLACEHOLDER": "Hello Marzi, I am interested in...",
+        "MESSAGE_ERROR": "Please tell me about your project",
+        "PRIVACY": "I've read the",
+        "PRIVACY_SECOND": "privacy policy",
+        "PRIVACY_THIRD": "and agree to the processing of my data as outlined.",
+        "PRIVACY_ERROR": "Please accept the privacy policy",
+        "SUBMIT": "Say Hello ;)"
+      }
+    },
+    "FOOTER": {
+      "JOB": "Web Developer",
+      "LOCATION": "Magdeburg Germany",
+      "COPYRIGHT": "© Marzieh Ghasedian 2025",
+      "LEGAL": "Legal Notice"
+    }
+  }

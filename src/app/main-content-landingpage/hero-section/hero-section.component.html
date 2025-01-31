@@ -3,8 +3,12 @@
   <div class="left-section">
     <div class="language-switch">
       <button class="switch-btn">
-        <span class="lang-btn active">EN</span>
-        <span class="lang-btn">DE</span>
+        <span class="lang-btn" 
+          [class.active]="currentLang === 'en'"
+          (click)="switchLanguage('en')">EN</span>
+        <span class="lang-btn" 
+          [class.active]="currentLang === 'de'"
+          (click)="switchLanguage('de')">DE</span>
       </button>
     </div>
 
@@ -15,7 +19,7 @@
              class="menu-link"
              [class.active]="item.active"
              (click)="setActiveItem($index)">
-            {{ item.label }}
+            {{ item.label | translate}}
             <span class="hover-dot"></span>
           </a>
         </li>
@@ -59,15 +63,15 @@
  </nav>
 
  <div class="hero-content">
-  <h1 class="title">Frontend Developer</h1>
-  <h2 class="name">MarZieh GhaSedian</h2>
+   <h1 class="title">{{ 'HERO.TITLE' | translate }}</h1>
+   <h2 class="name">{{ 'HERO.NAME' | translate }}</h2>
   
-  <div class="cta-buttons">
+   <div class="cta-buttons">
     <button class="btn-primary">
-      <span class="button-text">Check my work</span>
+      <span class="button-text">{{ 'HERO.CHECK_WORK' | translate }}</span>
     </button>
     <button class="btn-secondary">
-      <span class="button-text">Contact me</span>
+      <span class="button-text">{{ 'HERO.CONTACT' | translate }}</span>    
     </button>
   </div>
 
@@ -97,33 +101,22 @@
   <div class="scrolling-banner">
     <div class="infinite-marquee">
       <div class="marquee-content">
-        <span>Available for remote work</span>
         <span class="dot">•</span>
-        <span>Frontend Developer</span>
+        <span>{{ 'HERO.BANNER.REMOTE' | translate }}</span>
         <span class="dot">•</span>
-        <span>Based in Magdeburg</span>
+        <span>{{ 'HERO.BANNER.DEVELOPER' | translate }}</span>
         <span class="dot">•</span>
-        <span>Open to opportunities</span>
+        <span>{{ 'HERO.BANNER.LOCATION' | translate }}</span>
         <span class="dot">•</span>
-      </div>
-      <div class="marquee-content">
-        <span>Available for remote work</span>
+        <span>{{ 'HERO.BANNER.OPPORTUNITIES' | translate }}</span>
         <span class="dot">•</span>
-        <span>Frontend Developer</span>
+        <span>{{ 'HERO.BANNER.REMOTE' | translate }}</span>
         <span class="dot">•</span>
-        <span>Based in Magdeburg</span>
+        <span>{{ 'HERO.BANNER.DEVELOPER' | translate }}</span>
         <span class="dot">•</span>
-        <span>Open to opportunities</span>
+        <span>{{ 'HERO.BANNER.LOCATION' | translate }}</span>
         <span class="dot">•</span>
-      </div>
-      <div class="marquee-content">
-        <span>Available for remote work</span>
-        <span class="dot">•</span>
-        <span>Frontend Developer</span>
-        <span class="dot">•</span>
-        <span>Based in Magdeburg</span>
-        <span class="dot">•</span>
-        <span>Open to opportunities</span>
+        <span>{{ 'HERO.BANNER.OPPORTUNITIES' | translate }}</span>
         <span class="dot">•</span>
       </div>
     </div>

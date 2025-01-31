@@ -1,0 +1,103 @@
+{
+    "HERO": {
+      "TITLE": "Frontend Entwicklerin",
+      "NAME": "MarZieh GhaSedian",
+      "CHECK_WORK": "Meine Arbeit",
+      "CONTACT": "Kontaktiere mich",
+      "EMAIL": "marzighased@gmail.com",
+      "BANNER": {
+        "REMOTE": "Verfügbar für Remote-Arbeit",
+        "DEVELOPER": "Frontend Entwicklerin", 
+        "LOCATION": "In Magdeburg ansässig",
+        "OPPORTUNITIES": "Offen für Möglichkeiten"
+      }
+    },
+    "NAV": {
+      "ABOUT": "Über mich",
+      "SKILLS": "Fähigkeiten", 
+      "PROJECTS": "Projekte"
+    },
+    "ABOUT": {
+      "TITLE": "Wer ich bin",
+      "SUBTITLE": "Über mich",
+      "DESCRIPTION": "Hallo, ich bin eine deutschsprachige Frontend-Entwicklerin aus Magdeburg. Motiviert durch die unbegrenzten Möglichkeiten in der IT, begeistere ich mich für die Gestaltung visuell ansprechender und intuitiver Websites und Anwendungen.",
+      "LOCATION": "Flexibel in Bezug auf Arbeitsumgebungen, kann ich sowohl vor Ort in Magdeburg als auch remote effektiv arbeiten.",
+      "MINDSET": "Ich bin aufgeschlossen und suche stets nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.",
+      "APPROACH": "In meinem Beruf geht es beim Programmieren nicht nur ums Codeschreiben; es ist eine kreative Form der Problemlösung. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen umzuwandeln. Auf diese Weise helfe ich Ihnen, Ihre Ziele zu erreichen und Ihre Visionen zum Leben zu erwecken."
+    },
+    "SKILLS": {
+      "TITLE": "Technologien",
+      "SET_TITLE": "Skillset",
+      "DESCRIPTION": "Meine Reise beinhaltete die Arbeit an verschiedenen Projekten, die mir wertvolle Lektionen über Problemlösungskonzepte beigebracht haben. Durch GR verstehe ich neue Technologien und Methoden, um meine Fähigkeiten kontinuierlich zu verbessern und in der sich ständig weiterentwickelnden Landschaft der Webentwicklung voraus zu sein.",
+      "NEED_SKILL": "Benötigen Sie",
+      "NEED_ANOTHER": "andere Fähigkeit?",
+      "CONTACT": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
+      "LETS_TALK": "Lass uns reden"
+    },
+    "PROJECTS": {
+      "TITLE": "Portfolio",
+      "SUBTITLE": "Ausgewählte Projekte",
+      "DESCRIPTION": "Erkunden Sie hier eine Auswahl meiner Arbeiten - Interagieren Sie mit den Projekten, um meine Fähigkeiten in Aktion zu sehen.",
+      "ABOUT": "Worum geht es bei diesem Projekt?",
+      "NEXT": "Nächstes Projekt",
+      "LIVE": "Live Test",
+      "JOIN": {
+      "TITLE": "Join",
+      "DESCRIPTION": "Task-Manager inspiriert vom Kanban-System. Erstellen und organisieren Sie Aufgaben mit Drag & Drop-Funktionen, weisen Sie Benutzer und Kategorien zu."
+     },
+     "POLLO": {
+      "TITLE": "El Pollo Loco",
+      "DESCRIPTION": "Jump-and-Run-Spiel basierend auf objektorientierter Programmierung."
+     },
+     "BUBBLE": {
+      "TITLE": "DA Bubble",
+      "DESCRIPTION": "Angular-basierte Chat-Anwendung mit Echtzeit-Messaging."
+     }
+    },
+    "FEEDBACK": {
+      "TITLE": "Was meine Kollegen über mich sagen",
+      "TESTIMONIAL1": {
+      "TEXT": "Ich habe effizient mit Marzi zusammengearbeitet",
+      "ROLE": "Frontend-Entwickler"
+     },
+      "TESTIMONIAL2": {
+      "TEXT": "Marzi hat sich als zuverlässige Gruppenpartnerin erwiesen. Ihre technischen Fähigkeiten und proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
+      "ROLE": "Team-Partner"
+     },
+      "TESTIMONIAL3": {
+      "TEXT": "Ich hatte das Glück, mit Marzi an einem Projekt in der Developer Academy zu arbeiten. Sie hat sich bei jeder Aufgabe, die wir gemeinsam bearbeitet haben, sehr engagiert und blieb während des gesamten Projekts fokussiert.",
+      "ROLE": "Projektmanager"
+     }
+    },
+    "CONTACT": {
+      "TITLE": "Kontakt",
+      "SUBTITLE": "Lass uns zusammen arbeiten",
+      "PROBLEM": "Haben Sie ein Problem zu lösen?",
+      "DESCRIPTION": "Kontaktieren Sie mich über dieses Formular. Ich interessiere mich dafür, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
+      "NEED_DEV": "Brauchen Sie einen Frontend-Entwickler?",
+      "LETS_TALK": "Lass uns reden!",
+      "FORM": {
+        "NAME": "Wie heißen Sie?",
+        "NAME_PLACEHOLDER": "Ihr Name",
+        "NAME_ERROR": "Ups! Ihr Name fehlt",
+        "EMAIL": "Wie lautet Ihre E-Mail?",
+        "EMAIL_PLACEHOLDER": "Ihreemail@email.com",
+        "EMAIL_ERROR": "Hoppla! Ihre E-Mail wird benötigt",
+        "EMAIL_INVALID": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "MESSAGE": "Wie kann ich Ihnen helfen?",
+        "MESSAGE_PLACEHOLDER": "Hallo Marzi, ich interessiere mich für...",
+        "MESSAGE_ERROR": "Bitte erzählen Sie mir von Ihrem Projekt",
+        "PRIVACY": "Ich habe die",
+        "PRIVACY_SECOND": "Datenschutzerklärung",
+        "PRIVACY_THIRD": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
+        "PRIVACY_ERROR": "Bitte akzeptieren Sie die Datenschutzerklärung",
+        "SUBMIT": "Sag Hallo ;)"
+      }
+    },
+    "FOOTER": {
+      "JOB": "Web Entwicklerin",
+      "LOCATION": "Magdeburg Deutschland",
+      "COPYRIGHT": "© Marzieh Ghasedian 2025",
+      "LEGAL": "Impressum"
+    }
+  }

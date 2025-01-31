@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 
 interface Project {
   id: number;
-  title: string;
-  description: string;
+  titleKey: string;
+  descriptionKey: string;
   technologies: string[];
   githubLink: string;
   liveLink: string;
@@ -16,7 +17,7 @@ interface Project {
 @Component({
   selector: 'app-projects-overview-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './projects-overview-section.component.html',
   styleUrl: './projects-overview-section.component.scss'
 })
@@ -24,11 +25,13 @@ export class ProjectsOverviewSectionComponent {
   selectedProject: Project | null = null;
   isModalOpen = false;
 
+  constructor(private translate: TranslateService) {}
+
   projects: Project[] = [
     {
       id: 1,
-      title: 'Join',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      titleKey: 'PROJECTS.JOIN.TITLE',
+      descriptionKey: 'PROJECTS.JOIN.DESCRIPTION',
       thumbnail: './../../../assets/images/join.jpg', 
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       githubLink: 'https://github.com/yourusername/join',
@@ -37,8 +40,8 @@ export class ProjectsOverviewSectionComponent {
     },
     {
       id: 2,
-      title: 'El Pollo Loco',
-      description: 'Jump and run game based on object-oriented programming.',
+      titleKey: 'PROJECTS.POLLO.TITLE',
+      descriptionKey: 'PROJECTS.POLLO.DESCRIPTION',
       thumbnail: './../../../assets/images/elpollo.jpg',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       githubLink: 'https://github.com/yourusername/el-pollo-loco',
@@ -47,8 +50,8 @@ export class ProjectsOverviewSectionComponent {
     },
     {
       id: 3,
-      title: 'DA Bubble',
-      description: 'Angular-based chat application with real-time messaging.',
+      titleKey: 'PROJECTS.BUBBLE.TITLE',
+      descriptionKey: 'PROJECTS.BUBBLE.DESCRIPTION',
       thumbnail: './../../../assets/images/bubble.jpg',
       technologies: ['Angular', 'Firebase', 'TypeScript'],
       githubLink: 'https://github.com/yourusername/da-bubble',

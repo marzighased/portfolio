@@ -1,17 +1,18 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 interface Testimonial {
   id: number;
-  text: string;
+  textKey: string;
   author: string;
-  role: string;
+  roleKey: string;
 }
 
 @Component({
   selector: 'app-feedback-section',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './feedback-section.component.html',
   styleUrls: ['./feedback-section.component.scss']
 })
@@ -20,21 +21,21 @@ export class FeedbackSectionComponent {
   testimonials: Testimonial[] = [
     {
       id: 1,
-      text: "I worked with Marzi in an efficient way",
+      textKey: "FEEDBACK.TESTIMONIAL1.TEXT",
       author: "T.Schulz",
-      role: "Front Developer"
+      roleKey: "FEEDBACK.TESTIMONIAL1.ROLE"
     },
     {
       id: 2,
-      text: "Marzi has proven to be a reliable group partner. Her technical skills and proactive approach were crucial to the success of our project.",
+      textKey: "FEEDBACK.TESTIMONIAL2.TEXT",
       author: "H.Janisch",
-      role: "Team Partner"
+      roleKey: "FEEDBACK.TESTIMONIAL2.ROLE"
     },
     {
       id: 3,
-      text: "I had the good fortune of working with Marzi on a project at the Developer Academy. She put a lot of effort into every task we worked on together and stayed focused throughout the project.",
+      textKey: "FEEDBACK.TESTIMONIAL3.TEXT",
       author: "S.Miller",
-      role: "Project Manager"
+      roleKey: "FEEDBACK.TESTIMONIAL3.ROLE"
     }
   ];
 

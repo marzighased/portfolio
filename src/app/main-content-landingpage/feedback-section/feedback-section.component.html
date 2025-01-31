@@ -1,6 +1,6 @@
 <section class="feedback-section">
     <div class="testimonials-container">
-      <h2 class="section-title">What my colleagues say about me</h2>
+      <h2 class="section-title">{{ 'FEEDBACK.TITLE' | translate }}</h2>
       
       <div class="testimonials-slider">
         <div class="testimonials-track">
@@ -12,10 +12,10 @@
               <div class="quote">
                 <img src="./../../../assets/icons/quotes.svg" alt="Quote">
               </div>
-              <p class="text">{{testimonial.text}}</p>
+              <p class="text">{{testimonial.textKey | translate }}</p>
               <div class="author">
                 <span class="name">{{testimonial.author}}</span>
-                <span class="role">- {{testimonial.role}}</span>
+                <span class="role">- {{testimonial.roleKey | translate }}</span>
               </div>
             </div>
           }
