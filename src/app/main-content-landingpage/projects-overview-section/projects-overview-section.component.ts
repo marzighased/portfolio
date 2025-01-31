@@ -29,31 +29,31 @@ export class ProjectsOverviewSectionComponent {
       id: 1,
       title: 'Join',
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      thumbnail: './../../../assets/images/join.png', 
+      thumbnail: './../../../assets/images/join.jpg', 
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       githubLink: 'https://github.com/yourusername/join',
       liveLink: 'https://your-live-link.com/join',
-      modalImage: './../../../assets/images/join.png' 
+      modalImage: './../../../assets/images/join.jpg' 
     },
     {
       id: 2,
       title: 'El Pollo Loco',
       description: 'Jump and run game based on object-oriented programming.',
-      thumbnail: './../../../assets/images/pollo loco.png',
+      thumbnail: './../../../assets/images/elpollo.jpg',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       githubLink: 'https://github.com/yourusername/el-pollo-loco',
       liveLink: 'https://your-live-link.com/el-pollo-loco',
-      modalImage: './../../../assets/images/pollo loco.png' 
+      modalImage: './../../../assets/images/elpollo.jpg' 
     },
     {
       id: 3,
       title: 'DA Bubble',
       description: 'Angular-based chat application with real-time messaging.',
-      thumbnail: './../../../assets/images/da bubble.png',
+      thumbnail: './../../../assets/images/bubble.jpg',
       technologies: ['Angular', 'Firebase', 'TypeScript'],
       githubLink: 'https://github.com/yourusername/da-bubble',
       liveLink: 'https://your-live-link.com/da-bubble',
-      modalImage: './../../../assets/images/da bubble.png'
+      modalImage: './../../../assets/images/bubble.jpg'
     }
   ];
 

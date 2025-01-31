@@ -1,13 +1,16 @@
 @import './../../../styles/styles.global.scss';
 
 .feedback-section {
+
+margin-top: -80px;
   .testimonials-container {    
     .section-title {
       @include fira;
       color: #3ed0b2;
       font-size: 2.5rem;
       text-align: center;
-      margin-bottom: 2rem;
+      margin-bottom: 10px;
+      margin-top: 1rem;
     }
     
     .testimonials-slider {
@@ -49,26 +52,29 @@
         &.left {
           transform: translate(-150%, -50%) scale(0.8);
           visibility: visible;
-          opacity: 0.3;
+          opacity: 0.7;
           z-index: 1;
           width: 600px;
+          background: rgba(94, 197, 161, 0.1);
         }
         
         &.right {
           transform: translate(50%, -50%) scale(0.8);
           visibility: visible;
-          opacity: 0.3;
+          opacity: 0.7;
           z-index: 1;
           width: 600px;
+          background: rgba(94, 197, 161, 0.1);
         }
         
         .quote {
           position: absolute;
-          top: -30px;
+          top: -11px;
           left: -45px;
           z-index: 3;
           opacity: 0;
           visibility: hidden;
+          co
           
           img {
             width: 90px;
@@ -93,29 +99,41 @@
         }
         
         .author {
-          text-align: right;
-          margin-top: auto;
+            text-align: right;
+            margin-top: auto;
+            display: flex;  
+            align-items: center;  
+            justify-content: flex-end;
+            gap: 15px;  
+            
+            &:before {  
+              content: '';
+              height: 2px;
+              width: 320px;  
+              background-color: #9e9a9a; 
+            }
           
-          .name {
-            @include karla;
-            color: #E5E5E5;
-            font-size: 1.1rem;
-            display: inline-block;
-            margin-right: 0.5rem;
-          }
+             .name {
+               @include karla;
+               color: #E5E5E5;
+               font-size: 1.1rem;
+               display: inline-block;
+               margin-right: 3px;
+              }
           
-          .role {
-            @include karla;
-            color: #E5E5E5;
-            opacity: 0.8;
-            font-size: 0.9rem;
-          }
+             .role {
+               @include karla;
+               color: #E5E5E5;
+               opacity: 0.8;
+               font-size: 0.9rem;
+               margin-left: -15px;
+              }
+            
+        }  
         }
-      }
       
       .navigation {
         position: absolute;
-        bottom: 2rem;
         top: 350px;
         left: 50%;
         transform: translateX(-50%);

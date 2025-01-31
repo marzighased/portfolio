@@ -1,0 +1,141 @@
+@import './../../../styles/styles.global.scss';
+
+.footer-section {
+  width: 100%;
+  padding: 32px 120px;
+  margin-top: -100px; 
+  margin-bottom: 50px;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    max-width: 1400px;
+    margin: 0 auto;
+    
+    .footer-left {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      
+      .footer-logo {
+        height: 70px;
+        width: 70px;
+        padding-bottom: 20px;
+      }
+      
+      .footer-info {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        
+        .job-title, .location {
+          @include karla;
+          font-size: 18px;
+          color: #E5E5E5;
+        }
+      }
+    }
+
+    .footer-center {
+      .copyright {
+        @include fira;
+        font-size: 20px;
+        color: #3ed0b2;
+        opacity: 0.7;
+        padding-top: 60px;
+      }
+    }
+    
+    .footer-right {
+      .footer-links {
+        display: flex;
+        flex-direction: column; 
+        gap: 10px;
+        
+        .footer-link {
+          @include karla;
+          position: relative;
+          text-decoration: none;
+          font-size: 18px;
+          color: #E5E5E5;
+          padding: 4px;
+          transition: color 0.3s ease;
+          
+          .hover-dot {
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #3ed0b2;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+          
+          &:hover {
+            color: #3ed0b2;
+            
+            .hover-dot {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 24px;
+    
+    .footer-content {
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      text-align: center;
+      
+      .footer-left {
+        align-items: center;
+        
+        .footer-info {
+          align-items: center;
+        }
+      }
+      
+      .footer-right {
+        .footer-links {
+          align-items: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-section {
+    padding: 16px;
+    
+    .footer-content {
+      .footer-left {
+        .footer-logo {
+          height: 40px;
+        }
+      }
+      
+      .footer-right {
+        .footer-links {
+          gap: 12px;
+          
+          .footer-link {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

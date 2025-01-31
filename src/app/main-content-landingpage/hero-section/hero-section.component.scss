@@ -251,17 +251,18 @@
   z-index: 2;
 }
 
+
 .infinite-marquee {
   display: flex;
-  width: fit-content;
   animation: marquee 20s linear infinite;
-  gap: 0;
+  
 }
 
 .marquee-content {
   display: flex;
   white-space: nowrap;
-  padding-right: 20px;
+  flex-shrink: 0;
+  width: max-content;
   
   span {
     color: #3ed0b2;
@@ -272,6 +273,15 @@
     &.dot {
       opacity: 0.5;
     }
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
   }
 }
 
@@ -361,8 +371,6 @@
 }
 
 
-
-// Media query for tablet
 @media (max-width: 768px) {
   .nav-container {
     padding: 16px;
@@ -388,14 +396,14 @@
   }
 }
 
-// Media query for mobile
+
 @media (max-width: 480px) {
   .nav-container {
     padding: 16px;
     justify-content: space-between;
     
     .left-section {
-      display: none; // Hide regular menu
+      display: none; 
     }
     
     .logo {

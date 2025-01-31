@@ -22,7 +22,7 @@ export class FeedbackSectionComponent {
       id: 1,
       text: "I worked with Marzi in an efficient way",
       author: "T.Schulz",
-      role: "Frontend Developer"
+      role: "Front Developer"
     },
     {
       id: 2,
