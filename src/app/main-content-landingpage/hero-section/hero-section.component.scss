@@ -81,6 +81,7 @@
       font-size: 20px;
       padding: 8px;
       transition: color 0.3s ease;
+      cursor: pointer;
 
       .hover-dot {
         position: absolute;
@@ -96,16 +97,17 @@
       }
 
       &:hover {
+        color: #3ed0b2;
         .hover-dot {
           opacity: 1;
         }
       }
 
       &.active {
-        color: rgba(229, 184, 168, 0.8);
+        color: #3ed0b2;
         .hover-dot {
           opacity: 1;
-          background-color: rgba(229, 184, 168, 0.8);
+          background-color: #3ed0b2;
         }
       }
     }
@@ -195,6 +197,7 @@
     color: #3ed0b2;  
     font-size: 30px;
     transition: all 0.3s ease;
+    transform: translateY(-30px);
 
     .hover-dot {
       position: absolute;
@@ -222,14 +225,15 @@
   
   .email {
     writing-mode: vertical-lr;
-    transform: rotate(180deg);
+    transform: rotate(180deg) translateY(20px);
     color: white;
     font-family: 'Karla';
     font-size: 16px;
     margin-top: 32px;
     margin-right: 12px;
     margin-bottom: 15px;
-    transition: all 0.3s ease;  
+    transition: all 0.3s ease; 
+     
     
     &:hover {
       color: #3ed0b2;
@@ -337,7 +341,7 @@
     right: 115px;
     
     .vertical-line {
-      height: 195px;
+      height: 170px;
       width: 1px; 
     }
   }

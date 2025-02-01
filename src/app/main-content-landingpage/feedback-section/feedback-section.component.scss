@@ -7,10 +7,10 @@ margin-top: -80px;
     .section-title {
       @include fira;
       color: #3ed0b2;
-      font-size: 2.5rem;
+      font-size: 40px;
       text-align: center;
       margin-bottom: 10px;
-      margin-top: 1rem;
+      margin-top: 16px;
     }
     
     .testimonials-slider {
@@ -30,7 +30,7 @@ margin-top: -80px;
         min-height: 260px;
         left: 50%;
         top: 50%;
-        padding: 2.5rem;
+        padding: 40px;
         background: rgba(33, 67, 55, 0.95);
         border: 1px solid #3ed0b2;
         border-radius: 30px;
@@ -91,9 +91,9 @@ margin-top: -80px;
         .text {
           @include karla;
           color: #E5E5E5;
-          font-size: 1.1rem;
+          font-size: 18px;
           line-height: 1.6;
-          margin-bottom: 2rem;
+          margin-bottom: 32px;
           overflow-y: auto;
           flex: 1;
         }
@@ -116,7 +116,7 @@ margin-top: -80px;
              .name {
                @include karla;
                color: #E5E5E5;
-               font-size: 1.1rem;
+               font-size: 18px;
                display: inline-block;
                margin-right: 3px;
               }
@@ -125,7 +125,7 @@ margin-top: -80px;
                @include karla;
                color: #E5E5E5;
                opacity: 0.8;
-               font-size: 0.9rem;
+               font-size: 14px;
                margin-left: -15px;
               }
             
@@ -139,14 +139,14 @@ margin-top: -80px;
         transform: translateX(-50%);
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 32px;
         z-index: 3;
         
         .nav-btn {
           background: transparent;
           border: none;
           cursor: pointer;
-          padding: 0.5rem;
+          padding: 8px;
           transition: all 0.3s ease;
           
           img {
@@ -171,7 +171,7 @@ margin-top: -80px;
         
         .indicators {
           display: flex;
-          gap: 1rem;
+          gap: 16px;
           
           .indicator {
             width: 8px;
@@ -199,20 +199,20 @@ margin-top: -80px;
   }
 
   .contact-section {
-    margin-top: 6rem;
+    margin-top: 96px;
     
     h3 {
       @include karla;
       color: #3ed0b2;
-      font-size: 1.2rem;
-      margin-bottom: 1rem;
+      font-size: 19px;
+      margin-bottom: 16px;
     }
     
     h2 {
       @include fira;
       color: #3ed0b2;
-      font-size: 4rem;
-      margin-bottom: 3rem;
+      font-size: 64px;
+      margin-bottom: 48px;
     }
     
     .input-group {
@@ -222,7 +222,7 @@ margin-top: -80px;
         @include karla;
         color: #3ed0b2;
         display: block;
-        margin-bottom: 0.5rem;
+        margin-bottom: 8px;
       }
       
       input {
@@ -230,10 +230,10 @@ margin-top: -80px;
         background: transparent;
         border: none;
         border-bottom: 1px solid #3ed0b2;
-        padding: 0.5rem 0;
+        padding: 8px 0;
         color: #E5E5E5;
         @include karla;
-        font-size: 1.1rem;
+        font-size: 18px;
         
         &::placeholder {
           color: rgba(229, 229, 229, 0.5);
@@ -262,24 +262,24 @@ margin-top: -80px;
 
 @media (max-width: 768px) {
   .feedback-section {
-    padding: 2rem;
+    padding: 32px;
     
     .testimonials-slider {
       .testimonial-card {
         width: 90%;
-        padding: 1.5rem;
+        padding: 24px;
         height: 200px;      
         min-height: 200px;
         
         .text {
-          font-size: 1rem;
+          font-size: 16px;
         }
       }
     }
     
     .contact-section {
       h2 {
-        font-size: 3rem;
+        font-size: 48px;
       }
     }
   }

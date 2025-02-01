@@ -33,10 +33,11 @@
 
     
     @if (isModalOpen && selectedProject) {
-        <div class="modal-overlay">
-            <div class="modal-content">
+        <div class="modal-overlay" (click)="closeModal()">
+            <div class="modal-content" (click)="$event.stopPropagation()">
                 <button class="close-btn" (click)="closeModal()">
-                    <img src="./../../../assets/icons/close_small.png" alt="Close">
+                    <img src="./../../../assets/icons/close_small.png" alt="Close" class="icon-white">
+                    <img src="./../../../assets/icons/close.png" alt="Close" class="icon-green">
                 </button>
 
                 <div class="project-details">

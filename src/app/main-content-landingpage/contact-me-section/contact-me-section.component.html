@@ -60,4 +60,13 @@
         </form>
       </div>
     </div>
+    <div class="success-modal" *ngIf="showSuccessModal">
+        <div class="modal-content">
+          <h3>{{ 'CONTACT.SUCCESS.TITLE' | translate }}</h3>
+          <p>{{ 'CONTACT.SUCCESS.MESSAGE' | translate }}</p>
+          <button class="ok-btn" (click)="closeSuccessModal()">
+            {{ 'CONTACT.SUCCESS.BUTTON' | translate }}
+          </button>
+        </div>
+    </div>
 </section>

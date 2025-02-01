@@ -92,6 +92,11 @@
         "PRIVACY_THIRD": "gelesen und stimme der Verarbeitung meiner Daten wie beschrieben zu.",
         "PRIVACY_ERROR": "Bitte akzeptieren Sie die Datenschutzerklärung",
         "SUBMIT": "Sag Hallo ;)"
+      },
+      "SUCCESS": {
+      "TITLE": "Erfolg!",
+      "MESSAGE": "Ihre Nachricht wurde erfolgreich gesendet.",
+      "BUTTON": "OK"
       }
     },
     "FOOTER": {

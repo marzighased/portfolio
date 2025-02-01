@@ -1,7 +1,7 @@
 @import './../../../styles/styles.global.scss';
 
 .contact-me-section {
-  padding: 15rem 7rem;
+  padding: 240px 112px;
   
   .content-wrapper {
     max-width: 1400px;
@@ -18,40 +18,40 @@
         @include karla;
         color: #3ed0b2;
         font-size: 25px;
-        margin-bottom: 1rem;
+        margin-bottom: 16px;
       }
       
       .title {
         @include fira;
         color: #3ed0b2;
-        font-size: 4rem;
-        margin-bottom: 2rem;
+        font-size: 64px;
+        margin-bottom: 32px;
         line-height: 1.2;
       }
 
       .intro-text {
-        margin-bottom: 3rem;
+        margin-bottom: 48px;
 
         .problem-text {
           @include fira;
           color: #3ed0b2;
-          font-size: 1.25rem;
-          margin-bottom: 1.5rem;
+          font-size: 20px;
+          margin-bottom: 24px;
           font-weight: 600;
         }
 
         .contact-description {
           @include karla;
           color: #E5E5E5;
-          font-size: 1rem;
+          font-size: 16px;
           line-height: 1.6;
-          margin-bottom: 1.5rem;
+          margin-bottom: 24px;
         }
 
         .developer-text {
           @include karla;
           color: #E5E5E5;
-          font-size: 1rem;
+          font-size: 16px;
 
           .talk-link {
             color: #3ed0b2;
@@ -89,7 +89,7 @@
             @include fira;
             color: #3ed0b2;
             display: block;
-            margin-bottom: 10pxrem;
+            margin-bottom: 10px;
             font-size: 25px;
           }
           
@@ -98,10 +98,10 @@
             background: transparent;
             border: none;
             border-bottom: 1px solid #3ed0b2;
-            padding: 1rem;
+            padding: 16px;
             color: #E5E5E5;
             @include karla;
-            font-size: 1.1rem;
+            font-size: 18px;
             transition: all 0.3s ease;
             
             &::placeholder {
@@ -123,23 +123,26 @@
         .error-message {
           @include karla;
           color: #ff4444;
-          font-size: 0.9rem;
-          margin-top: 0.5rem;
+          font-size: 14px;
+          margin-top: 8px;
           opacity: 0;
           animation: fadeIn 0.3s ease forwards;
         }
         
         .privacy-policy {
-          margin-bottom: 2rem;
+          margin-bottom: 32px;
           
           .checkbox-container {
             @include karla;
             color: #E5E5E5;
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 0.9rem;
+            align-items: flex-start;
+            gap: 13px;
+            font-size: 15px;
             cursor: pointer;
+            line-height: 1.4;
+            flex-wrap: wrap;
+            max-width: 100%;
             
             input[type="checkbox"] {
               display: none;
@@ -155,8 +158,9 @@
             }
             
             .checkmark {
-              width: 18px;
+              min-width: 18px;
               height: 18px;
+              margin-top: 2px;
               border: 1px solid #3ed0b2;
               border-radius: 3px;
               position: relative;
@@ -181,6 +185,8 @@
           .policy-link {
             color: #3ed0b2;
             text-decoration: none;
+            white-space: nowrap;
+            margin: 0 4px;
             
             &:hover {
               text-decoration: underline;
@@ -227,6 +233,77 @@
       }
     }
   }
+
+  .success-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+  
+    .modal-content {
+      background-image: linear-gradient(45deg, #1c1c1c 50%, #08463B);
+      border: 1px solid #3ed0b2;
+      border-radius: 20px;
+      padding: 32px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+      animation: slideUp 0.3s ease;
+  
+      h3 {
+        @include fira;
+        color: #3ed0b2;
+        font-size: 24px;
+        margin-bottom: 16px;
+      }
+  
+      p {
+        @include karla;
+        color: #E5E5E5;
+        margin-bottom: 24px;
+        font-size: 16px;
+      }
+  
+      .ok-btn {
+        @include base-button;
+        padding: 10px 30px;
+        font-size: 16px;
+        
+        &:hover {
+          border-color: #3ed0b2;
+          color: #3ed0b2;
+        }
+      }
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
 }
 
 @keyframes fadeIn {
@@ -242,11 +319,11 @@
 
 @media (max-width: 1024px) {
   .contact-me-section {
-    padding: 3rem;
+    padding: 48px;
     
     .content-wrapper {
       flex-direction: column;
-      gap: 3rem;
+      gap: 48px;
       
       .text-column,
       .form-column {
@@ -258,28 +335,58 @@
 
 @media (max-width: 768px) {
   .contact-me-section {
-    padding: 2rem;
-    
+    padding: 32px;
+
+
     .content-wrapper {
       .text-column {
         .title {
-          font-size: 3rem;
+          font-size: 48px;
         }
       }
     }
   }
+
+  .checkbox-container {
+    font-size: 14px; 
+    gap: 8px;
+  }
+
+
+
 }
+
 
 @media (max-width: 480px) {
   .contact-me-section {
-    padding: 1.5rem;
+    padding: 24px;
     
     .content-wrapper {
       .text-column {
         .title {
-          font-size: 2.5rem;
+          font-size: 40px;
         }
       }
     }
+
+    .success-modal {
+        .modal-content {
+          width: 85%;
+          padding: 24px;
+    
+          h3 {
+            font-size: 20px;
+          }
+    
+          p {
+            font-size: 14px;
+          }
+    
+          .ok-btn {
+            padding: 8px 24px;
+            font-size: 14px;
+          }
+        }
+      }
   }
 }

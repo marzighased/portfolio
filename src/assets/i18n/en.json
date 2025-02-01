@@ -92,6 +92,11 @@
         "PRIVACY_THIRD": "and agree to the processing of my data as outlined.",
         "PRIVACY_ERROR": "Please accept the privacy policy",
         "SUBMIT": "Say Hello ;)"
+      },
+      "SUCCESS": {
+      "TITLE": "Success!",
+      "MESSAGE": "Your message has been sent successfully.",
+      "BUTTON": "OK"
       }
     },
     "FOOTER": {

@@ -14,6 +14,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ContactMeSectionComponent {
   contactForm: FormGroup;
   showPrivacyError = false;
+  showSuccessModal = false;
 
   constructor(private fb: FormBuilder) {
     this.contactForm = this.fb.group({
@@ -33,6 +34,7 @@ export class ContactMeSectionComponent {
   onSubmit() {
     if (this.contactForm.valid) {
       console.log('Form submitted:', this.contactForm.value);
+      this.showSuccessModal = true;
       this.contactForm.reset();
       this.showPrivacyError = false;
     } else {
@@ -41,6 +43,10 @@ export class ContactMeSectionComponent {
         this.showPrivacyError = true;
       }
     }
+  }
+
+  closeSuccessModal() {
+    this.showSuccessModal = false;
   }
 
   private markFormGroupTouched(formGroup: FormGroup) {
