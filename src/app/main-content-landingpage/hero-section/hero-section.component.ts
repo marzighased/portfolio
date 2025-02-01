@@ -32,10 +32,23 @@ export class HeroSectionComponent {
       item.active = i === index;
     });
     this.isMenuOpen = false;
+    const sectionId = this.menuItems[index].href.substring(1);
+    this.scrollToSection(sectionId);
   }
 
   switchLanguage(lang: string): void {
     this.currentLang = lang;
     this.translate.use(lang);
+  }
+
+  scrollToSection(sectionId: string): void {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  sendEmail(email: string): void {
+    window.location.href = `mailto:${email}`;
   }
 }

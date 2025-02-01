@@ -1,4 +1,4 @@
-<section class="skills-section">
+<section id="skills" class="skills-section">
     <h2 class="title">{{ 'SKILLS.TITLE' | translate }}</h2>
   <div class="content-wrapper" >
     <div class="skill-box">
@@ -9,7 +9,7 @@
       <div class="skill-box__extra">
         <p>{{ 'SKILLS.NEED_SKILL' | translate }} <span>{{ 'SKILLS.NEED_ANOTHER' | translate }}</span></p>
         <p class="skill-box__extra_descript">{{ 'SKILLS.CONTACT' | translate }}</p>
-        <button class="btn-lets-talk">
+        <button class="btn-lets-talk" (click)="scrollToSection('contact')">
           <span class="btn-text">{{ 'SKILLS.LETS_TALK' | translate }}</span>
         </button>
       </div>

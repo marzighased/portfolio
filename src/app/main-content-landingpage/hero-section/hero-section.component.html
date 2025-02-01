@@ -15,12 +15,11 @@
     <ul class="menu-items">
       @for (item of menuItems; track $index) {
         <li>
-          <a [href]="item.href" 
+          <a (click)="scrollToSection(item.href.substring(1)); setActiveItem($index)"
              class="menu-link"
-             [class.active]="item.active"
-             (click)="setActiveItem($index)">
-            {{ item.label | translate}}
-            <span class="hover-dot"></span>
+             [class.active]="item.active">
+             {{ item.label | translate }}
+             <span class="hover-dot"></span>
           </a>
         </li>
       }
@@ -42,12 +41,11 @@
     <ul class="menu-items">
       @for (item of menuItems; track $index) {
         <li>
-          <a [href]="item.href" 
+          <a (click)="scrollToSection(item.href.substring(1)); setActiveItem($index)" 
              class="menu-link"
-             [class.active]="item.active"
-             (click)="setActiveItem($index)">
-            {{ item.label }}
-            <span class="hover-dot"></span>
+             [class.active]="item.active">
+             {{ item.label | translate }}
+             <span class="hover-dot"></span>
           </a>
         </li>
       }
@@ -55,8 +53,8 @@
     
     <div class="language-switch">
       <button class="switch-btn">
-        <span class="lang-btn active">EN</span>
-        <span class="lang-btn">DE</span>
+        <span class="lang-btn [class.active]="currentLang === 'en'" (click)="switchLanguage('en')">EN</span>
+        <span class="lang-btn" [class.active]="currentLang === 'de'" (click)="switchLanguage('de')">DE</span>
       </button>
     </div>
   </div> -->
@@ -67,21 +65,21 @@
    <h2 class="name">{{ 'HERO.NAME' | translate }}</h2>
   
    <div class="cta-buttons">
-    <button class="btn-primary">
+    <button class="btn-primary" (click)="scrollToSection('projects')">
       <span class="button-text">{{ 'HERO.CHECK_WORK' | translate }}</span>
     </button>
-    <button class="btn-secondary">
+    <button class="btn-secondary" (click)="scrollToSection('contact')">
       <span class="button-text">{{ 'HERO.CONTACT' | translate }}</span>    
     </button>
   </div>
 
   <div class="social-links">
-    <div class="email">marzighased&commat;gmail.com</div>
-    <a href="https://github.com/yourusername" class="social-link">
+    <div class="email" (click)="sendEmail('marzighased@gmail.com')">marzighased&commat;gmail.com</div>
+    <a href="https://github.com/marzighased" target="_blank" class="social-link">
       <i class="fab fa-github"></i>
       <span class="hover-dot"></span>
     </a>
-    <a href="https://linkedin.com/in/yourusername" class="social-link">
+    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
       <i class="fab fa-linkedin"></i>
       <span class="hover-dot"></span>
     </a>

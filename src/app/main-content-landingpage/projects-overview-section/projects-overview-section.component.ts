@@ -34,8 +34,8 @@ export class ProjectsOverviewSectionComponent {
       descriptionKey: 'PROJECTS.JOIN.DESCRIPTION',
       thumbnail: './../../../assets/images/join.jpg', 
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
-      githubLink: 'https://github.com/yourusername/join',
-      liveLink: 'https://your-live-link.com/join',
+      githubLink: 'https://github.com/marzighased?tab=repositories',
+      liveLink: 'https://marzighased.de/join',
       modalImage: './../../../assets/images/join.jpg' 
     },
     {
@@ -44,8 +44,8 @@ export class ProjectsOverviewSectionComponent {
       descriptionKey: 'PROJECTS.POLLO.DESCRIPTION',
       thumbnail: './../../../assets/images/elpollo.jpg',
       technologies: ['HTML', 'CSS', 'JavaScript'],
-      githubLink: 'https://github.com/yourusername/el-pollo-loco',
-      liveLink: 'https://your-live-link.com/el-pollo-loco',
+      githubLink: 'https://github.com/marzighased/El-pollo-loco',
+      liveLink: 'https://marzighased/el-pollo-loco',
       modalImage: './../../../assets/images/elpollo.jpg' 
     },
     {
@@ -54,8 +54,8 @@ export class ProjectsOverviewSectionComponent {
       descriptionKey: 'PROJECTS.BUBBLE.DESCRIPTION',
       thumbnail: './../../../assets/images/bubble.jpg',
       technologies: ['Angular', 'Firebase', 'TypeScript'],
-      githubLink: 'https://github.com/yourusername/da-bubble',
-      liveLink: 'https://your-live-link.com/da-bubble',
+      githubLink: 'https://github.com/marzighased?tab=repositories',
+      liveLink: 'https://marzighased.de/da-bubble',
       modalImage: './../../../assets/images/bubble.jpg'
     }
   ];

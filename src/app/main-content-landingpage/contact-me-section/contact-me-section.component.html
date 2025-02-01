@@ -1,4 +1,4 @@
-<section class="contact-me-section">
+<section id="contact" class="contact-me-section">
     <div class="content-wrapper">
       <div class="text-column">
         <h3 class="subtitle">{{ 'CONTACT.TITLE' | translate }}</h3>
@@ -45,7 +45,7 @@
             <label class="checkbox-container">
               <input type="checkbox" formControlName="privacyPolicy">
               <span class="checkmark"></span>
-              {{ 'CONTACT.FORM.PRIVACY' | translate }}<a href="#" class="policy-link">{{ 'CONTACT.FORM.PRIVACY_SECOND' | translate }}</a>{{ 'CONTACT.FORM.PRIVACY_THIRD' | translate }}
+              {{ 'CONTACT.FORM.PRIVACY' | translate }}<a routerLink="/impressum" class="policy-link">{{ 'CONTACT.FORM.PRIVACY_SECOND' | translate }}</a>{{ 'CONTACT.FORM.PRIVACY_THIRD' | translate }}
             </label>
             <div class="error-message" *ngIf="showPrivacyError">
                 {{ 'CONTACT.FORM.PRIVACY_ERROR' | translate }}

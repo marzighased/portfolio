@@ -99,5 +99,22 @@
       "LOCATION": "Magdeburg Deutschland",
       "COPYRIGHT": "© Marzieh Ghasedian 2025",
       "LEGAL": "Impressum"
+    },
+    "PRIVACY": {
+     "TITLE": "Impressum & Datenschutzerklärung",
+     "CONTACT_INFO": "Kontaktinformationen",
+     "DATA_PROTECTION": "Datenschutz",
+     "DATA_COLLECTION": {
+     "TITLE": "Datenerfassung",
+     "TEXT": "Diese Website erfasst personenbezogene Daten ausschließlich über das Kontaktformular. Die von Ihnen bereitgestellten Informationen (Name, E-Mail) werden nur zur Beantwortung Ihrer Anfragen verwendet."
+     },
+     "COOKIES": {
+     "TITLE": "Cookies & Analyse",
+     "TEXT": "Diese Website verwendet nur essenzielle Cookies, die für die grundlegende Funktionalität erforderlich sind. Es werden keine Tracking-Cookies von Drittanbietern verwendet."
+     },
+     "RIGHTS": {
+     "TITLE": "Ihre Rechte",
+     "TEXT": "Sie haben das Recht, kostenlos Auskunft über Ihre gespeicherten Daten, deren Herkunft, Empfänger und den Zweck der Datenverarbeitung zu erhalten. Sie haben außerdem das Recht, diese Daten berichtigen, sperren oder löschen zu lassen."
+     }
     }
-  }
+}

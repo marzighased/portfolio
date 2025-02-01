@@ -7,12 +7,13 @@ import { ProjectsOverviewSectionComponent } from './projects-overview-section/pr
 import { FeedbackSectionComponent } from './feedback-section/feedback-section.component';
 import { ContactMeSectionComponent } from './contact-me-section/contact-me-section.component';
 import { FooterSectionComponent } from './footer-section/footer-section.component';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-main-content-landingpage',
   standalone: true,
   imports: [CommonModule, HeroSectionComponent, AboutMeSectionComponent,SkillsSectionComponent, 
-    ProjectsOverviewSectionComponent, FeedbackSectionComponent, ContactMeSectionComponent, FooterSectionComponent],
+    ProjectsOverviewSectionComponent, FeedbackSectionComponent, ContactMeSectionComponent, FooterSectionComponent, RouterModule],
   templateUrl: './main-content-landingpage.component.html',
   styleUrl: './main-content-landingpage.component.scss'
 })

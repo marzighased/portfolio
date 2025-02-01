@@ -99,5 +99,22 @@
       "LOCATION": "Magdeburg Germany",
       "COPYRIGHT": "© Marzieh Ghasedian 2025",
       "LEGAL": "Legal Notice"
+    },
+    "PRIVACY": {
+      "TITLE": "Legal Notice & Privacy Policy",
+      "CONTACT_INFO": "Contact Information",
+      "DATA_PROTECTION": "Data Protection",
+      "DATA_COLLECTION": {
+      "TITLE": "Data Collection",
+      "TEXT": "This website collects personal information only through the contact form. The information you provide (name, email) is used solely for responding to your inquiries."
+     },
+     "COOKIES": {
+      "TITLE": "Cookies & Analytics",
+      "TEXT": "This website uses essential cookies necessary for its basic functionality. No third-party tracking cookies are used."
+     },
+     "RIGHTS": {
+      "TITLE": "Your Rights",
+      "TEXT": "You have the right to request information about your stored data, its origin, recipients, and the purpose of its collection at no charge. You also have the right to request that it be corrected, blocked, or deleted."
+     }
     }
-  }
+}
