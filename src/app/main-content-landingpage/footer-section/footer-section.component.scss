@@ -3,7 +3,7 @@
 .footer-section {
   width: 100%;
   padding: 32px 120px;
-  margin-top: -100px; 
+  margin-top: 0px; 
   margin-bottom: 50px;
 
   .footer-content {
@@ -89,53 +89,93 @@
 }
 
 
-@media (max-width: 768px) {
-  .footer-section {
-    padding: 24px;
-    
-    .footer-content {
-      flex-direction: column;
-      align-items: center;
-      gap: 24px;
-      text-align: center;
-      
-      .footer-left {
-        align-items: center;
-        
-        .footer-info {
-          align-items: center;
-        }
-      }
-      
-      .footer-right {
-        .footer-links {
-          align-items: center;
-        }
-      }
-    }
-  }
-}
 
-@media (max-width: 480px) {
-  .footer-section {
-    padding: 16px;
-    
-    .footer-content {
-      .footer-left {
-        .footer-logo {
-          height: 40px;
+@media (max-width: 768px) {
+    .footer-section {
+      padding: 20px;
+      margin-top: 40px;
+  
+      .footer-content {
+        display: grid;
+        grid-template-areas: 
+          "left right"
+          "copyright copyright";
+        gap: 32px;
+        width: 100%;
+  
+        .footer-left {
+          grid-area: left;
+          align-items: flex-start; 
+          text-align: left;
+  
+          .footer-logo {
+            height: 50px;
+            width: 50px;
+            padding-bottom: 10px;
+          }
+  
+          .footer-info {
+            align-items: flex-start;
+  
+            .job-title, .location {
+              font-size: 14px;
+            }
+          }
         }
-      }
-      
-      .footer-right {
-        .footer-links {
-          gap: 12px;
-          
-          .footer-link {
-            font-size: 12px;
+  
+        .footer-center {
+          grid-area: copyright;
+          width: 100%;
+  
+          .copyright {
+            font-size: 16px;
+            padding-top: 0;
+            text-align: center;
+          }
+        }
+  
+        .footer-right {
+          grid-area: right;
+  
+          .footer-links {
+            flex-direction: column;
+            align-items: flex-end; 
+            gap: 10px;
+  
+            .footer-link {
+              font-size: 14px;
+              position: relative;
+              padding-left: 15px;
+              text-align: right;
+  
+              .hover-dot {
+                left: 0;
+              }
+            }
           }
         }
       }
     }
-  }
+}
+  
+
+  @media (max-width: 250px) {
+    .footer-section {
+
+    margin-top: 30px;
+      .footer-content {
+        grid-template-areas: 
+          "left"
+          "right"
+          "copyright";
+        
+        .footer-right .footer-links {
+          align-items: center; 
+        }
+        
+        .footer-left {
+          align-items: center;
+        }
+      }
+    }
 }

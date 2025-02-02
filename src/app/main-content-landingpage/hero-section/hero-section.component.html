@@ -12,7 +12,7 @@
       </button>
     </div>
 
-    <ul class="menu-items">
+    <ul class="menu-items desktop-menu">
       @for (item of menuItems; track $index) {
         <li>
           <a (click)="scrollToSection(item.href.substring(1)); setActiveItem($index)"
@@ -31,17 +31,15 @@
   </div>
 
   <div class="hamburger-menu" (click)="toggleMenu()">
-    <div class="hamburger-icon">
-      <i class="fas fa-bars"></i>
-    </div>
+    <i class="fas fa-bars"></i>
   </div>
-
-  <!-- 
-  <div class="mobile-menu" [class.open]="isMenuOpen">
+ </nav>
+  
+  <div class="mobile-menu-overlay" [class.open]="isMenuOpen" (click)="toggleMenu()">
     <ul class="menu-items">
       @for (item of menuItems; track $index) {
         <li>
-          <a (click)="scrollToSection(item.href.substring(1)); setActiveItem($index)" 
+          <a (click)="setActiveItem($index); scrollToSection(item.href.substring(1))" 
              class="menu-link"
              [class.active]="item.active">
              {{ item.label | translate }}
@@ -53,12 +51,12 @@
     
     <div class="language-switch">
       <button class="switch-btn">
-        <span class="lang-btn [class.active]="currentLang === 'en'" (click)="switchLanguage('en')">EN</span>
+        <span class="lang-btn" [class.active]="currentLang === 'en'" (click)="switchLanguage('en')">EN</span>
         <span class="lang-btn" [class.active]="currentLang === 'de'" (click)="switchLanguage('de')">DE</span>
       </button>
     </div>
-  </div> -->
- </nav>
+  </div> 
+ 
 
  <div class="hero-content">
    <h1 class="title">{{ 'HERO.TITLE' | translate }}</h1>
@@ -74,7 +72,13 @@
   </div>
 
   <div class="social-links">
-    <div class="email" (click)="sendEmail('marzighased@gmail.com')">marzighased&commat;gmail.com</div>
+    <div class="email-container">
+      <div class="email-text" (click)="sendEmail('marzighased@gmail.com')">marzighased&commat;gmail.com</div>
+      <div class="email-icon" (click)="sendEmail('marzighased@gmail.com')">
+        <img src="./../../../assets/icons/mail.svg" alt="Email">
+        <span class="hover-dot"></span>
+      </div>
+    </div>  
     <a href="https://github.com/marzighased" target="_blank" class="social-link">
       <i class="fab fa-github"></i>
       <span class="hover-dot"></span>

@@ -2,7 +2,7 @@
 
 .feedback-section {
 
-margin-top: -80px;
+  margin-top: -80px;
   .testimonials-container {    
     .section-title {
       @include fira;
@@ -248,39 +248,112 @@ margin-top: -80px;
   }
 }
 
-@media (max-width: 1200px) {
-  .feedback-section {
-    .testimonials-slider {
-      .testimonial-card {
-        width: 600px;
-        height: 220px;      
-        min-height: 220px;
-      }
-    }
-  }
-}
+
+
 
 @media (max-width: 768px) {
-  .feedback-section {
-    padding: 32px;
-    
-    .testimonials-slider {
-      .testimonial-card {
-        width: 90%;
-        padding: 24px;
-        height: 200px;      
-        min-height: 200px;
+    .feedback-section {
+        position: relative;
+        top: -200px;
+      
+      .testimonials-container {
+        .section-title {
+          font-size: 28px;
+          margin-bottom: 24px;
+        }
         
-        .text {
-          font-size: 16px;
+        .testimonials-slider {
+          height: 350px;
+          
+          .testimonial-card {
+            width: calc(100% - 32px);
+            height: auto;
+            min-height: 180px;
+            padding: 20px;
+            
+            &.active {
+              //transform: translate(-50%, -50%) scale(1);
+              visibility: visible;
+              opacity: 1;
+              width: 400px;
+              height: 200px;
+            }
+            
+            &.left, &.right {
+              display: none;
+              visibility: hidden;
+              opacity: 0;
+            }
+            
+            .quote {
+              left: -25px;
+              top: -8px;
+              
+              img {
+                width: 60px;
+              }
+            }
+            
+            .text {
+              font-size: 14px;
+              line-height: 1.4;
+              margin-bottom: 16px;
+            }
+            
+            .author {
+              &:before {
+                width: 160px;
+              }
+              
+              .name {
+                font-size: 16px;
+              }
+              
+              .role {
+                font-size: 12px;
+              }
+            }
+          }
+          
+          .navigation {
+            top: 300px;
+            gap: 16px;
+            
+            .nav-btn {
+              padding: 4px;
+              
+              img {
+                width: 24px;
+                height: 24px;
+              }
+            }
+            
+            .indicators {
+              gap: 8px;
+              
+              .indicator {
+                width: 6px;
+                height: 6px;
+              }
+            }
+          }
         }
       }
     }
-    
-    .contact-section {
-      h2 {
-        font-size: 48px;
+}
+
+@media (max-width: 480px) {
+    .feedback-section {
+        margin-top: -10px;
+      .testimonials-slider {
+        .testimonial-card {
+          &.active {
+            width: calc(100% - 32px);  
+            height: auto;
+            
+          }
+        }
       }
     }
   }
-}
+

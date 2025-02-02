@@ -219,11 +219,13 @@
         opacity: 1;
       }
     }
-
-
   }
+
+ .email-container {
+  position: relative;
+  margin-bottom: 15px;
   
-  .email {
+  .email-text {
     writing-mode: vertical-lr;
     transform: rotate(180deg) translateY(20px);
     color: white;
@@ -231,17 +233,56 @@
     font-size: 16px;
     margin-top: 32px;
     margin-right: 12px;
-    margin-bottom: 15px;
-    transition: all 0.3s ease; 
-     
+    transition: all 0.3s ease;
+    cursor: pointer;
     
     &:hover {
       color: #3ed0b2;
-      cursor: pointer; 
     }
   }
-}
+  
+  .email-icon {
+    display: none;
+    position: relative;
+    font-size: 30px;
+    transition: all 0.3s ease;
+    transform: translateY(-30px);
+    cursor: pointer;
+    
+    img {
+      width: 30px;
+      height: 30px;
 
+      &:hover {
+        color: #E5E5E5;
+      }
+    }
+    
+    .hover-dot {
+      position: absolute;
+      right: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #3ed0b2;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    &:hover {
+      
+      .hover-dot {
+        opacity: 1;
+      }
+    }
+  }
+
+
+
+}
+}
 .scrolling-banner {
   position: absolute;
   width: 100%;
@@ -356,6 +397,10 @@
   display: none; 
 }
 
+.mobile-menu-overlay {
+  display: none;
+}
+
 @keyframes floatingArrow {
   0%, 100% {
     transform: translateY(0);
@@ -374,189 +419,371 @@
   }
 }
 
+@media (max-width: 1024px) {
+  .hero-wrapper {
+    .nav-container {
+      padding: 24px;
 
-@media (max-width: 768px) {
-  .nav-container {
-    padding: 16px;
-    
-    .left-section {
-      padding-left: 20px;
-    }
-    
-    .logo img {
-      height: 45px;
-      padding-right: 20px;
-    }
-  }
+      .logo img {
+        height: 50px;
+        padding-right: 30px;
+      }
 
-  .hero-content {
-    .title {
-      font-size: 32px;
+      .menu-items {
+        gap: 24px;
+        
+        .menu-link {
+          font-size: 18px;
+        }
+      }
     }
-    
-    .name {
-      font-size: 60px;
+
+    .hero-content {
+      .title {
+        font-size: 36px;
+      }
+      
+      .name {
+        font-size: 80px;
+      }
+
+      .cta-buttons {
+        gap: 30px;
+        
+        .btn-primary, .btn-secondary {
+          padding: 14px 32px;
+          font-size: 18px;
+        }
+      }
+    }
+
+    .social-links {
+      right: 60px;
+      
+      .social-link {
+        font-size: 26px;
+      }
+      
+      .email {
+        font-size: 14px;
+      }
     }
   }
 }
 
+@media (max-width: 768px) {
+  
+  .hero-wrapper {
+    .nav-container {
+      padding: 20px;
+      
+      .left-section {
+        padding-left: 10px;
+        gap: 24px;
+        display: none;
+      }
+      
+      .logo img {
+        height: 40px;
+        padding-right: 20px;
+      }
 
-@media (max-width: 480px) {
-  .nav-container {
-    padding: 16px;
-    justify-content: space-between;
-    
-    .left-section {
-      display: none; 
-    }
-    
-    .logo {
-      img {
-        height: 35px;
-        padding-right: 0;
+      .menu-items {
+        display: none;
+      }
+
+      .language-switch {
+        display: none;
+      }
+
+      .hamburger-menu {
+        display: block;
+        color: #3ed0b2;
+        font-size: 28px;
+        cursor: pointer;
       }
     }
-    
-    .hamburger-menu {
-      color: #3ed0b2;
-      display: block;
-      cursor: pointer;
-      width: 30px;
-      height: 30px;
-      position: relative;
-      font-size: 32px;
-      z-index: 1100;
-      position: fixed;
-      right: 20px;
+
+    .hero-content {
+      padding: 0 20px;
+      
+      .title {
+        font-size: 32px;
+      }
+      
+      .name {
+        font-size: 60px;
+      }
+
+      .cta-buttons {
+        gap: 20px;
+        
+        .btn-primary, .btn-secondary {
+          padding: 12px 28px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .social-links {
+      right: 30px;
+
+      .email-container {
+        .email-text {
+          display: none;
+        }
+        
+      .email-icon {
+        display: block;
+      }
+     }
+      
+      .social-link {
+        font-size: 24px;
+      }
+      
+      
+    }
+
+    .side-line {
+      &.left {
+        left: 80px;
+        
+        .vertical-line {
+          height: 180px;
+        }
+      }
+      
+      &.right {
+        right: 60px;
+        
+        .vertical-line {
+          height: 120px;
+        }
+      }
     }
   }
 
-  .mobile-menu {
+  .mobile-menu-overlay {
     position: fixed;
-    top: 60px;
-    right: 15px;
-    width: 220px;
+    top: 80px;
+    right: 20px;
+    width: 250px;
     background: linear-gradient(45deg, #1c1c1c 50%, #08463B);
-    backdrop-filter: blur(10px);
     border: 1px solid #3ed0b2;
     border-radius: 20px;
-    padding: 35px 25px;
+    padding: 32px;
     z-index: 1000;
     transform: translateX(100%);
     transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    display: none;
+    overflow: hidden;
+    
     
     &.open {
       transform: translateX(0);
+      display: block;
+      transition: visibility 0.3s ease, opacity 0.3s ease;
     }
     
     .menu-items {
-      display: flex;
-      align-items: center;
+      display: flex !important;
       flex-direction: column;
-      gap: 20px;
+      align-items: center;
+      gap: 24px;
       
       .menu-link {
+        @include fira;
         font-size: 18px;
-        color: #E5E5E5;
+        width: 100%;
+        display: block;
         position: relative;
-
-        &.active, &:hover {
-          color: #3ed0b2;
-        }
         
         .hover-dot {
           position: absolute;
-          bottom: -5px;
-          transform: translateY(-50%);
-          width: 6px;
-          height: 6px;
-          background-color: #3ed0b2;
+          bottom: -3px;
+          width: 7px;
+          height: 7px;
           border-radius: 50%;
+          background-color: #3ed0b2;
+          left: 50%;
+          top: 120%;
+          transform: translateY(-50%);
           opacity: 0;
           transition: opacity 0.3s ease;
         }
-        
-        &:hover .hover-dot {
-          opacity: 1;
+
+        &:hover {
+          color: #3ed0b2;
+          cursor: pointer;
+
+          .hover-dot {
+            opacity: 1;
+          }
+
+        }
+
+        &.active {
+          color: #3ed0b2;
+          .hover-dot {
+            opacity: 1;
+            background-color: #3ed0b2;
+          }
         }
       }
     }
 
     .language-switch {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
       margin-top: 20px;
-    }
-  }
-
-  .hero-content {
-    height: 100vh;
-    padding: 0 20px;
-    justify-content: flex-start;
-    padding-top: 100px;
-    
-    .title {
-      font-size: 24px;
-    }
-    
-    .name {
-      font-size: 40px;
-    }
-
-    .cta-buttons {
-      margin-top: 30px;
+      display: flex !important;
+      justify-content: center;
       
-      .btn-primary, .btn-secondary {
-        font-size: 16px;
-        padding: 12px 30px;
+      .switch-btn {
+        padding: 0px;
+        background: transparent;
+        border: 1px solid #3ed0b2;
+        border-radius: 25px;
+        display: inline-flex;
+
+        &:hover:not(active) {
+          border: 1px solid #E5E5E5;
+        }
+
+        span {
+          @include fira;
+          padding: 4px 12px;
+          border-radius: 20px;
+          transition: all 0.3s ease;
+          font-size: 14px;
+
+          &:hover:not(.active) {
+            color: #3ed0b2;
+          }
+        }
+        
+        .lang-btn {
+          @include fira;
+          padding: 4px 12px;
+          border-radius: 16px;
+          color: #E5E5E5;
+          transition: all 0.3s ease;
+          font-size: 14px;
+
+          &:hover:not(.active) {
+            background: transparent;
+            cursor: pointer;
+          }
+
+          &.active {
+            background: #3ed0b2;
+          }
+        }
       }
     }
   }
+}
 
-  .social-links {
-    position: fixed;
-    bottom: 100px;
-    right: 20px;
-    flex-direction: column;
-    gap: 20px;
-    
-    .social-link {
-      font-size: 24px;
+@media (max-width: 480px) {
+  .hero-wrapper {
+    .nav-container {
+      padding: 16px;
       
-      .hover-dot {
-        right: -12px;
-        width: 6px;
-        height: 6px;
+      .logo img {
+        height: 35px;
+        padding-right: 0;
+      }
+
+      .hamburger-menu {
+        font-size: 24px;
+        right: 16px;
       }
     }
 
-    .email {
+    .hero-content {
+      padding: 0 16px;
+      justify-content: center;
+      height: 100vh;
+      
+      .title {
+        font-size: 24px;
+        text-align: center;
+      }
+      
+      .name {
+        font-size: 40px;
+        text-align: center;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        gap: 16px;
+        align-items: center;
+        
+        .btn-primary, .btn-secondary {
+          width: 100%;
+          max-width: 280px;
+          padding: 12px 24px;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .social-links {
+      right: 16px;
+      transform: translateY(-40%);
+      
+      .social-link {
+        font-size: 20px;
+        transform: translateY(-20px);
+      }
+      
+      .email-container {
+        .email-icon {
+          img {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+
+    .side-line {
       display: none;
     }
-    
-    .email-icon {
-      color: #3ed0b2;
-      font-size: 24px;
-    }
 
-    &:before {
-      content: '\f0e0'; 
-      font-family: 'Font Awesome 5 Free';
-      color: #3ed0b2;
-      font-size: 24px;
-      margin-bottom: 20px;
-      display: block;
+    .scrolling-banner {
+      bottom: 20px;
+      transform: rotate(-2deg);
+      
+      .marquee-content span {
+        font-size: 18px;
+        padding: 0 12px;
+      }
     }
   }
 
-  .scrolling-banner {
-    position: fixed;
-    bottom: 30px;
+  .mobile-menu {
+    top: 70px;
+    right: 16px;
+    width: 220px;
+    padding: 24px;
     
-    .marquee-content {
-      span {
+    .menu-items {
+      gap: 20px;
+      
+      .menu-link {
         font-size: 16px;
+      }
+    }
+
+    .language-switch {
+      margin-top: 20px;
+      
+      .switch-btn {
+        .lang-btn {
+          font-size: 14px;
+        }
       }
     }
   }
