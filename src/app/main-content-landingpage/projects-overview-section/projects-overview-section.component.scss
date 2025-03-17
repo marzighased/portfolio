@@ -38,7 +38,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 2rem 0;
+      padding: 32px 0;
       border-bottom: 1px solid #3ED0B2;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -47,7 +47,7 @@
         flex: 1;
         display: flex;
         align-items: center;
-        gap: 2rem;
+        gap: 32px;
         position: static;
       }
 
@@ -181,6 +181,7 @@
       border-radius: 30px;
       position: relative;
       padding: 48px 60px;
+      overflow: hidden;
      
       .close-btn {
         position: absolute;
@@ -280,6 +281,7 @@
           display: flex;
           gap: 24px;
           margin-top: auto;
+          margin-bottom: 60px;
      
           .btn {
             @include base-button;
@@ -290,6 +292,7 @@
             padding: 12px 32px;
             transition: all 0.3s ease;
             text-decoration: none;
+            flex: 0 0 auto;
      
             img {
               width: 24px;
@@ -356,80 +359,185 @@
     }
   }
 }
-   
-.projects-section {
-    @media screen and (max-width: 1200px) {
-      margin-left: 0;
-      padding: 3rem 1.5rem;
-      max-width: 900px;
-    }
-  
-    @media screen and (max-width: 992px) {
-      padding: 2rem 1.25rem;
-  
+
+@media screen and (max-width: 1440px) {
+    .projects-section {
+      padding: 4rem 1.75rem;
+      max-width: 1050px;
+      margin-left: 40px;
+      
       .title-container {
         h2 {
-          font-size: 18px;
+          font-size: 19px;
         }
-        
         h3 {
-          font-size: 40px;
+          font-size: 48px;
+        }
+        p {
+          font-size: 17px;
+          max-width: 480px;
         }
       }
   
       .projects-list {
         .project-item {
+          padding: 30px 0;
+          
+          .project-title {
+            font-size: 28px;
+            padding-left: 20px;
+          }
+  
+          .technologies {
+            right: 20px;
+            span {
+              font-size: 17px;
+            }
+          }
+  
+          .project-image-wrapper {
+            right: -320px;
+            width: 290px;
+            height: 190px;
+          }
+        }
+      }
+    }
+  }
+  
+@media screen and (max-width: 1024px) {
+    .projects-section {
+      margin-left: 0;
+      max-width: 900px;
+  
+      .projects-list {
+        .project-item {
+          
+  
           .project-image-wrapper {
             display: none;
+          }
+        }
+      }
+  
+      .modal-overlay {
+        //padding: 1.5rem;
+        
+        .modal-content {
+          width: 90%;
+          max-width: 800px;
+          height: 90vh;
+          padding: 2rem;
+          overflow-y: auto;
+          
+          .project-details {
+            flex-direction: column;
+            gap: 2rem;
+            //height: auto;
+            
+            .left-content {
+              order: 2;
+              //width: 100%;
+            }
+            
+            .right-content {
+              order: 1;
+              //width: 100%;
+              
+              .project-image {
+                height: 300px;
+                object-fit: cover;
+              }
+            }
+            
+            .project-number {
+              font-size: 80px;
+              line-height: 1;
+            }
+            
+            h2 {
+              font-size: 36px;
+              padding-top: 1rem;
+            }
+            
+            .project-description {
+              h3 {
+                font-size: 24px;
+                margin-bottom: 1rem;
+              }
+              
+              p {
+                font-size: 16px;
+                max-width: 100%;
+                margin-bottom: 1.5rem;
+              }
+            }
+            
+            .tech-stack {
+              gap: 1rem;
+              flex-wrap: wrap;
+              margin: 1rem 0;
+              
+              img {
+                height: 28px;
+              }
+            }
+            
+            .action-buttons {
+              flex-wrap: nowrap;
+              justify-content: flex-start;
+              //gap: 1rem;
+              //width: 100%;
+              margin-bottom: 50px;
+              
+              .btn {
+                //width: 100%;
+                //justify-content: center;
+                padding: 0.75rem 1.5rem;
+                //font-size: 16px;
+              }
+            }
+            
+            .next-project {
+              left: 2rem;
+              bottom: 1.5rem;
+            }
+          }
+          
+          .close-btn {
+            top: 1rem;
+            right: 1rem;
+          }
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .projects-section {
+      padding: 2rem 1rem;
+      max-width: 700px;
+      
+  
+      .projects-list {
+        .project-item {
+           .content {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 8px;
+           }           
+          .project-title {
+            padding-left: 15px;
+            width: 100%;
           }
   
           .technologies {
             position: static;
-            margin-left: 25px;
-            margin-top: 0.5rem;
             justify-content: flex-start;
-          }
-        }
-      }
-    }
-  
-    @media screen and (max-width: 768px) {
-      padding: 2rem 1rem;
-      
-      .title-container {
-        margin-bottom: 2rem;
-        
-        h2 {
-          font-size: 16px;
-        }
-        
-        h3 {
-          font-size: 32px;
-        }
-        
-        p {
-          font-size: 16px;
-        }
-      }
-  
-      .projects-list {
-        .project-item {
-          padding: 1.25rem 0;
-          
-          .content {
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.5rem;
-          }
-          
-          .project-title {
-            font-size: 22px;
             padding-left: 15px;
-          }
-  
-          .technologies {
-            margin-left: 15px;
-            
+            width: 100%;
+            margin-top: 0;
+
             span {
               font-size: 14px;
             }
@@ -438,125 +546,50 @@
       }
   
       .modal-overlay {
-        padding: 1rem;
         
         .modal-content {
-          padding: 20px;
-          border-radius: 20px;
-          height: auto;
-          max-height: 90vh;
-          overflow-y: auto;
-  
-          .close-btn {
-            top: 15px;
-            right: 15px;
-            width: 16px;
-            height: 16px;
-          }
-  
-          .project-details {
-            flex-direction: column;
-            gap: 24px;
-            height: auto;
-  
+          padding: 1.5rem;
+          overflow: hidden;
+          
+          .project-details {            
             .project-number {
-              font-size: 70px;
-              margin-bottom: -10px;
+              font-size: 60px;
             }
-  
-            h2 {
-              font-size: 28px;
-              padding-top: 10px;
-              margin-bottom: 12px;
-            }
-  
-            .right-content {
-              order: -1;
-              margin-top: 1rem;
-              
-              .project-image {
-                border-radius: 16px;
+            
+            .action-buttons {
+                margin-bottom: 45px;
+                gap: 16px;
+
+              .btn {
+
+                padding: 0.75rem 1.25rem;
               }
             }
-  
-            .left-content {
-              .project-description {
-                h3 {
-                  font-size: 22px;
-                  margin-bottom: 12px;
-                }
-                
-                p {
-                  font-size: 15px;
-                  line-height: 1.5;
-                  margin-bottom: 24px;
-                  max-width: 100%;
-                }
-              }
-  
-              .tech-stack {
-                gap: 12px;
-                flex-wrap: wrap;
-                margin: 12px 0 20px;
-                padding-bottom: 20px;
-                
-                img {
-                  height: 24px;
-                }
-              }
-  
-              .action-buttons {
-                flex-direction: row;
-                gap: 12px;
-                justify-content: flex-start;
-                margin-bottom: 3.5rem;
-                
-                .btn {
-                  width: auto;
-                  flex: 1;
-                }
-              }
-            }
-  
+            
             .next-project {
-              order: 1; 
-              margin-top: 1rem;
-              align-self: flex-start;
+                bottom: 32px;
+                right: 10px;
+              
 
             }
           }
         }
       }
     }
+  }
   
-    @media screen and (max-width: 480px) {
+  @media screen and (max-width: 480px) {
+    .projects-section {
       padding: 1.5rem 0.75rem;
       
-      .title-container {
-        h2 {
-          font-size: 14px;
-        }
-        
-        h3 {
-          font-size: 28px;
-        }
-        
-        p {
-          font-size: 14px;
-        }
-      }
-  
       .projects-list {
         .project-item {
-          padding: 1rem 0;
-          
           .project-title {
-            font-size: 18px;
+            font-size: 20px;
           }
-  
           .technologies {
             span {
-              font-size: 13px;
+              font-size: 12px;
             }
           }
         }
@@ -564,42 +597,17 @@
   
       .modal-overlay {
         .modal-content {
-          padding: 16px;
+          padding: 1rem;
           
           .project-details {
-            gap: 20px;
+            gap: 1rem;
             
             .project-number {
-              font-size: 60px;
+              font-size: 50px;
             }
-  
+            
             h2 {
               font-size: 24px;
-            }
-  
-            .project-description {
-              h3 {
-                font-size: 20px;
-              }
-              
-              p {
-                font-size: 14px;
-              }
-            }
-  
-            .action-buttons {
-              gap: 8px;
-              margin-bottom: 1rem;
-              
-              .btn {
-                font-size: 14px;
-                padding: 8px 12px;
-                
-                img {
-                  width: 20px;
-                  height: 20px;
-                }
-              }
             }
           }
         }

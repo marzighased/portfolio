@@ -1,4 +1,111 @@
 @import './../../styles/styles.global.scss';
+.privacy-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(28, 28, 28, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(62, 208, 178, 0.2);
+  
+    .header-content {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 0 120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  
+      .left-section {
+        .logo {
+          img {
+            height: 50px;
+            width: auto;
+            transition: transform 0.3s ease;
+  
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+  
+      .right-section {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+  
+        .language-switch {
+          .switch-btn {
+            display: inline-flex;
+            background: transparent;
+            border: 1px solid #3ed0b2;
+            border-radius: 25px;
+            gap: 2px;
+  
+            &:hover:not(active) {
+              border: 1px solid #E5E5E5;
+            }
+  
+            span {
+              @include fira;
+              padding: 4px 12px;
+              border-radius: 20px;
+              transition: all 0.3s ease;
+              font-size: 14px;
+  
+              &:hover:not(.active) {
+                color: #3ed0b2;
+              }
+            }
+  
+            .lang-btn {
+              padding: 4px 12px;
+              border-radius: 16px;
+              color: #E5E5E5;
+              transition: all 0.3s ease;
+              font-family: 'Fira Code', monospace;
+              font-size: 14px;
+              
+              &:hover:not(.active) {
+                background: transparent;
+                cursor: pointer;
+              }
+          
+              &.active {
+                background: #3ed0b2;
+              }
+            }
+          }
+        }
+  
+        .back-btn {
+          @include base-button;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 10px 24px;
+          font-size: 16px;
+          border: 1px solid #3ed0b2;
+          transition: all 0.3s ease;
+  
+          i {
+            transition: transform 0.3s ease;
+          }
+  
+          &:hover {
+            background: rgba(62, 208, 178, 0.1);
+            
+            i {
+              transform: translateX(-4px);
+            }
+          }
+        }
+      }
+    }
+}
 
 .privacy-section {
   min-height: 100vh;
@@ -91,3 +198,39 @@
     }
   }
 }
+
+
+@media (max-width: 768px) {
+    .privacy-header {
+      .header-content {
+        padding: 0 20px;
+        
+        .right-section {
+          gap: 16px;
+  
+          .back-btn {
+            padding: 8px 16px;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .privacy-header {
+      .header-content {
+        .left-section {
+          .logo img {
+            height: 40px;
+          }
+        }
+  
+        .right-section {
+          .language-switch {
+            display: none;
+          }
+        }
+      }
+    }
+  }

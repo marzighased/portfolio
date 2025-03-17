@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { TranslateModule } from '@ngx-translate/core';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -11,5 +11,14 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './privacy-policy.component.scss'
 })
 export class PrivacyPolicyComponent {
+  currentLang: string = 'en';
 
+  constructor(private translate: TranslateService) {
+    this.currentLang = translate.currentLang || 'en';
+  }
+
+  switchLanguage(lang: string): void {
+    this.currentLang = lang;
+    this.translate.use(lang);
+  }
 }

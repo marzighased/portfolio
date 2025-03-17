@@ -1,3 +1,31 @@
+<header class="privacy-header">
+    <div class="header-content">
+      <div class="left-section">
+        <a routerLink="/" class="logo">
+          <img src="./../../assets/logos/mg-logo -main.png" alt="Logo">
+        </a>
+      </div>
+  
+      <div class="right-section">
+        <div class="language-switch">
+          <button class="switch-btn">
+            <span class="lang-btn" 
+              [class.active]="currentLang === 'en'"
+              (click)="switchLanguage('en')">EN</span>
+            <span class="lang-btn" 
+              [class.active]="currentLang === 'de'"
+              (click)="switchLanguage('de')">DE</span>
+          </button>
+        </div>
+  
+        <button class="back-btn" routerLink="/">
+          <i class="fas fa-arrow-left"></i>
+          {{ 'Back to Home' }}
+        </button>
+      </div>
+    </div>
+</header>
+
 <section id="impressum" class="privacy-section">
     <div class="content-wrapper">
       <h1>{{ 'PRIVACY.TITLE' | translate }}</h1>
