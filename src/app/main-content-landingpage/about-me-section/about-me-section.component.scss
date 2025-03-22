@@ -134,7 +134,13 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (min-width: 1800px) {
+  .about-me-container {
+    padding: 120px 8%;
+  }
+}
+
+@media (max-width: 1400px) {
     .about-me-container {
       padding: 80px 60px;
       
@@ -191,7 +197,7 @@
         }
 
         .features {
-          gap: 20px;
+          gap: 20px; 
         }
       }
     }
