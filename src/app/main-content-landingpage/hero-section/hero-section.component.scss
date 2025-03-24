@@ -545,43 +545,107 @@
           font-size: 16px;
         }
       }
+
+      
+    .right-elements-container {
+      position: absolute;
+      right: 15%;
+      bottom: 0;
+      top: 58%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+      
+      .social-link {
+        position: relative;
+        color: #3ed0b2;  
+        font-size: 30px;
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+      }
+
+      .email-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+
+        .email-text {
+          display: none;
+        }
+        
+        .email-icon {
+          position: relative;
+          font-size: 30px;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          margin-bottom: 10px;
+          display: block;
+
+          img {
+            width: 30px;
+            height: 30px;
+    
+            &:hover {
+              color: #E5E5E5;
+            }
+          }
+          
+          .hover-dot {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #3ed0b2;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+          
+          &:hover {
+            .hover-dot {
+              opacity: 1;
+            }
+          }
+        }
+      }
     }
 
     .side-line {
+      display: block !important;
+      
       &.left {
-        left: 50px;
-        .vertical-line {
-          height: 200px;
-        }
-      }
-    }
-
-    .right-elements-container {
-      right: 30px;
-      
-      .social-links {
-        gap: 12px;
+        left: 40px;
         
-        .social-link {
-          font-size: 22px;
+        .vertical-line {
+          height: 150px;
         }
+        
+        .capsule {
+          width: 30px;
+          height: 50px;
+        }
+      }
 
-        .email-container {
-          .email-text {
-            display: none;
-          }
-          
-          .email-icon {
-            display: block;
-            margin-bottom: 15px;
-          }
-        }
-      }
-      
-      .side-line.right {
-        height: 140px;
-      }
     }
+    .side-line.right {
+      margin-top: 30px; 
+      height: 70px;
+    }
+    }  
   }
 }
 
@@ -650,47 +714,105 @@
           }
         }
       }
+
+      
+    .right-elements-container {
+      position: absolute;
+      right: 15%;
+      bottom: 0;
+      top: 58%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
-    .right-elements-container {
-      right: 30px;
+    
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       
-      .social-links {
-        .email-container {
-          .email-text {
-            display: none;
+      .social-link {
+        position: relative;
+        color: #3ed0b2;  
+        font-size: 30px;
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+      }
+
+      .email-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        
+        .email-icon {
+          position: relative;
+          font-size: 30px;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          margin-bottom: 10px;
+
+          img {
+            width: 30px;
+            height: 30px;
+    
+            &:hover {
+              color: #E5E5E5;
+            }
           }
           
-          .email-icon {
-            display: block;
-            margin-bottom: 15px;
-
-            img {
-              width: 24px;
-              height: 24px;
+          .hover-dot {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #3ed0b2;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+          
+          &:hover {
+            .hover-dot {
+              opacity: 1;
             }
           }
         }
-        
-        .social-link {
-          font-size: 24px;
-        }
-      }
-      
-      .side-line.right {
-        height: 120px;
       }
     }
-    
+
     .side-line {
+      display: block !important;
+      
       &.left {
         left: 40px;
         
         .vertical-line {
-          height: 180px;
+          height: 150px;
+        }
+        
+        .capsule {
+          width: 30px;
+          height: 50px;
         }
       }
+
     }
+    .side-line.right {
+      margin-top: 30px;  
+    }
+    }
+
+   
+    
+    
+    
   }
 
   .mobile-menu-overlay {
@@ -822,6 +944,99 @@
       .name {
         font-size: 45px;
       }
+
+      
+    .right-elements-container {
+      position: absolute;
+      right: 15%;
+      bottom: 0;
+      top: 58%;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    
+    .social-links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      .social-link {
+        position: relative;
+        color: #3ed0b2;  
+        font-size: 30px;
+        transition: all 0.3s ease;
+        margin-bottom: 15px;
+      }
+
+      .email-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 0;
+        
+        .email-icon {
+          position: relative;
+          font-size: 30px;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          margin-bottom: 10px;
+
+          img {
+            width: 30px;
+            height: 30px;
+    
+            &:hover {
+              color: #E5E5E5;
+            }
+          }
+          
+          .hover-dot {
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: #3ed0b2;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+          }
+          
+          &:hover {
+            .hover-dot {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+
+    .side-line {
+      display: block !important;
+      
+      &.left {
+        left: 40px;
+        
+        .vertical-line {
+          height: 150px;
+        }
+        
+        .capsule {
+          width: 30px;
+          height: 50px;
+        }
+      }
+
+    }
+    .side-line.right {
+      margin-top: 30px;  
+    }
     }
   }
 }
@@ -877,7 +1092,7 @@
       position: absolute;
       right: 15%;
       bottom: 0;
-      top: 60%;
+      top: 58%;
       height: auto;
       display: flex;
       flex-direction: column;
@@ -889,16 +1104,14 @@
     .social-links {
       display: flex;
       flex-direction: column;
-      //align-items: center;
-      justify-content: space-evenly;
+      align-items: center;
+      margin-top: 70px;
 
-      
       .social-link {
         position: relative;
         color: #3ed0b2;  
         font-size: 30px;
         transition: all 0.3s ease;
-      
       }
 
       .email-container {
@@ -906,13 +1119,15 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 0;
         
         .email-icon {
           position: relative;
           font-size: 30px;
           transition: all 0.3s ease;
           cursor: pointer;
-          
+          margin-bottom: 10px;
+
           img {
             width: 30px;
             height: 30px;
@@ -959,7 +1174,12 @@
           height: 50px;
         }
       }
+
     }
+    .side-line.right {
+      margin-top: 30px; 
+    }
+
   }
     .scrolling-banner {
       bottom: 20px;
