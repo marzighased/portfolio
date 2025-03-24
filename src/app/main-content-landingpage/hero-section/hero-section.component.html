@@ -1,127 +1,126 @@
 <div class="hero-wrapper">
- <nav class="nav-container">
-  <div class="left-section">
-    <div class="language-switch">
-      <button class="switch-btn">
-        <span class="lang-btn" 
-          [class.active]="currentLang === 'en'"
-          (click)="switchLanguage('en')">EN</span>
-        <span class="lang-btn" 
-          [class.active]="currentLang === 'de'"
-          (click)="switchLanguage('de')">DE</span>
-      </button>
-    </div>
-
-    <ul class="menu-items desktop-menu">
-      @for (item of menuItems; track $index) {
-        <li>
-          <a (click)="scrollToSection(item.href.substring(1)); setActiveItem($index)"
-             class="menu-link"
-             [class.active]="item.active">
-             {{ item.label | translate }}
-             <span class="hover-dot"></span>
-          </a>
-        </li>
-      }
-    </ul>
-  </div>
-
-  <div class="logo">
-    <img src="assets/logos/mg-logo -main.png" alt="Logo">
-  </div>
-
-  <div class="hamburger-menu" (click)="toggleMenu($event)">
-    <i class="fas fa-bars"></i>
-  </div>
- </nav>
-  
-  <div class="mobile-menu-overlay" [class.open]="isMenuOpen" (click)="toggleMenu()">
-    <ul class="menu-items">
-      @for (item of menuItems; track $index) {
-        <li>
-          <a (click)="setActiveItem($index); scrollToSection(item.href.substring(1))" 
-             class="menu-link"
-             [class.active]="item.active">
-             {{ item.label | translate }}
-             <span class="hover-dot"></span>
-          </a>
-        </li>
-      }
-    </ul>
-    
-    <div class="language-switch">
-      <button class="switch-btn">
-        <span class="lang-btn" [class.active]="currentLang === 'en'" (click)="switchLanguage('en')">EN</span>
-        <span class="lang-btn" [class.active]="currentLang === 'de'" (click)="switchLanguage('de')">DE</span>
-      </button>
-    </div>
-  </div> 
+  <nav class="nav-container">
+   <div class="left-section">
+     <div class="language-switch">
+       <button class="switch-btn">
+         <span class="lang-btn" 
+           [class.active]="currentLang === 'en'"
+           (click)="switchLanguage('en')">EN</span>
+         <span class="lang-btn" 
+           [class.active]="currentLang === 'de'"
+           (click)="switchLanguage('de')">DE</span> 
+       </button>
+     </div>
  
-
- <div class="hero-content">
-   <h1 class="title">{{ 'HERO.TITLE' | translate }}</h1>
-   <h2 class="name">{{ 'HERO.NAME' | translate }}</h2>
+     <ul class="menu-items desktop-menu">
+       @for (item of menuItems; track $index) {
+         <li>
+           <a (click)="scrollToSection(item.href.substring(1)); setActiveItem($index)"
+              class="menu-link"
+              [class.active]="item.active">
+              {{ item.label | translate }}
+              <span class="hover-dot"></span>
+           </a>
+         </li>
+       }
+     </ul>
+   </div>
+ 
+   <div class="logo">
+     <img src="assets/logos/mg-logo -main.png" alt="Logo">
+   </div>
+ 
+   <div class="hamburger-menu" (click)="toggleMenu($event)">
+     <i class="fas fa-bars"></i>
+   </div>
+  </nav>
+   
+   <div class="mobile-menu-overlay" [class.open]="isMenuOpen" (click)="toggleMenu()">
+     <ul class="menu-items">
+       @for (item of menuItems; track $index) {
+         <li>
+           <a (click)="setActiveItem($index); scrollToSection(item.href.substring(1))" 
+              class="menu-link"
+              [class.active]="item.active">
+              {{ item.label | translate }}
+              <span class="hover-dot"></span>
+           </a>
+         </li>
+       }
+     </ul>
+     
+     <div class="language-switch">
+       <button class="switch-btn">
+         <span class="lang-btn" [class.active]="currentLang === 'en'" (click)="switchLanguage('en')">EN</span>
+         <span class="lang-btn" [class.active]="currentLang === 'de'" (click)="switchLanguage('de')">DE</span>
+       </button>
+     </div>
+   </div> 
   
-   <div class="cta-buttons">
-    <button class="btn-primary" (click)="scrollToSection('projects')">
-      <span class="button-text">{{ 'HERO.CHECK_WORK' | translate }}</span>
-    </button>
-    <button class="btn-secondary" (click)="scrollToSection('contact')">
-      <span class="button-text">{{ 'HERO.CONTACT' | translate }}</span>    
-    </button>
+ 
+  <div class="hero-content">
+    <h1 class="title">{{ 'HERO.TITLE' | translate }}</h1>
+    <h2 class="name">{{ 'HERO.NAME' | translate }}</h2>
+   
+    <div class="cta-buttons">
+     <button class="btn-primary" (click)="scrollToSection('projects')">
+       <span class="button-text">{{ 'HERO.CHECK_WORK' | translate }}</span>
+     </button>
+     <button class="btn-secondary" (click)="scrollToSection('contact')">
+       <span class="button-text">{{ 'HERO.CONTACT' | translate }}</span>    
+     </button>
+   </div>
+ 
+   <div class="side-line left">
+     <div class="capsule">
+       <div class="thin-arrow"></div>
+     </div>
+     <div class="vertical-line"></div>
+   </div>
+ 
+   <div class="right-elements-container">
+     <div class="social-links">
+       <div class="email-container">
+         <div class="email-text" (click)="sendEmail('marzighased@gmail.com')">marzighased&commat;gmail.com</div>
+         <div class="email-icon" (click)="sendEmail('marzighased@gmail.com')">
+           <img src="./../../../assets/icons/mail.svg" alt="Email">
+           <span class="hover-dot"></span>
+         </div>
+       </div>  
+       <a href="https://github.com/marzighased" target="_blank" class="social-link">
+         <i class="fab fa-github"></i>
+         <span class="hover-dot"></span>
+       </a>
+       <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
+         <i class="fab fa-linkedin"></i>
+         <span class="hover-dot"></span>
+       </a>
+     </div>
+     <div class="side-line right"></div>
+   </div>
+ 
+   <div class="scrolling-banner">
+     <div class="infinite-marquee">
+       <div class="marquee-content">
+         <span class="dot">•</span>
+         <span>{{ 'HERO.BANNER.REMOTE' | translate }}</span>
+         <span class="dot">•</span>
+         <span>{{ 'HERO.BANNER.DEVELOPER' | translate }}</span>
+         <span class="dot">•</span>
+         <span>{{ 'HERO.BANNER.LOCATION' | translate }}</span>
+         <span class="dot">•</span>
+         <span>{{ 'HERO.BANNER.OPPORTUNITIES' | translate }}</span>
+         <span class="dot">•</span>
+         <span>{{ 'HERO.BANNER.REMOTE' | translate }}</span>
+         <span class="dot">•</span>
+         <span>{{ 'HERO.BANNER.DEVELOPER' | translate }}</span>
+         <span class="dot">•</span>
+         <span>{{ 'HERO.BANNER.LOCATION' | translate }}</span>
+         <span class="dot">•</span>
+         <span>{{ 'HERO.BANNER.OPPORTUNITIES' | translate }}</span>
+         <span class="dot">•</span>
+       </div>
+     </div>
+   </div>
   </div>
-
-  <div class="social-links">
-    <div class="email-container">
-      <div class="email-text" (click)="sendEmail('marzighased@gmail.com')">marzighased&commat;gmail.com</div>
-      <div class="email-icon" (click)="sendEmail('marzighased@gmail.com')">
-        <img src="./../../../assets/icons/mail.svg" alt="Email">
-        <span class="hover-dot"></span>
-      </div>
-    </div>  
-    <a href="https://github.com/marzighased" target="_blank" class="social-link">
-      <i class="fab fa-github"></i>
-      <span class="hover-dot"></span>
-    </a>
-    <a href="https://linkedin.com/in/yourusername" target="_blank" class="social-link">
-      <i class="fab fa-linkedin"></i>
-      <span class="hover-dot"></span>
-    </a>
-  </div>
-
-  <div class="side-line left">
-    <div class="capsule">
-      <div class="thin-arrow"></div>
-    </div>
-    <div class="vertical-line"></div>
-  </div>
-
-  <div class="side-line right">
-    <div class="vertical-line"></div>
-  </div>
-
-  <div class="scrolling-banner">
-    <div class="infinite-marquee">
-      <div class="marquee-content">
-        <span class="dot">•</span>
-        <span>{{ 'HERO.BANNER.REMOTE' | translate }}</span>
-        <span class="dot">•</span>
-        <span>{{ 'HERO.BANNER.DEVELOPER' | translate }}</span>
-        <span class="dot">•</span>
-        <span>{{ 'HERO.BANNER.LOCATION' | translate }}</span>
-        <span class="dot">•</span>
-        <span>{{ 'HERO.BANNER.OPPORTUNITIES' | translate }}</span>
-        <span class="dot">•</span>
-        <span>{{ 'HERO.BANNER.REMOTE' | translate }}</span>
-        <span class="dot">•</span>
-        <span>{{ 'HERO.BANNER.DEVELOPER' | translate }}</span>
-        <span class="dot">•</span>
-        <span>{{ 'HERO.BANNER.LOCATION' | translate }}</span>
-        <span class="dot">•</span>
-        <span>{{ 'HERO.BANNER.OPPORTUNITIES' | translate }}</span>
-        <span class="dot">•</span>
-      </div>
-    </div>
-  </div>
- </div>
-</div> 
+</div>

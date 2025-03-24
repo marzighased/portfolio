@@ -441,7 +441,32 @@
         }
       }
     }
+}
+
+@media screen and (max-width: 1510px) {
+  .projects-section {
+    .projects-list {
+      .project-item {
+        .project-image-wrapper {
+          display: none; 
+        }
+      }
+    }
   }
+}
+
+@media screen and (max-width: 1440px) {
+  .projects-section {
+    .projects-list {
+      .project-item {
+        .project-image-wrapper {
+          display: none; 
+        }
+      }
+    }
+  }
+}
+
   
 
 @media screen and (max-width: 1024px) {
@@ -534,6 +559,7 @@
     }
   }
 }
+
 
 @media screen and (max-width: 768px) {
   .parent-container {
