@@ -13,7 +13,7 @@
   
       <div class="form-column">
         <div class="input-line"></div>
-        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-content">
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="form-content"> 
           <div class="form-group">
             <label>{{ 'CONTACT.FORM.NAME' | translate }}</label>
             <input type="text" formControlName="name" placeholder="{{ 'CONTACT.FORM.NAME_PLACEHOLDER' | translate }}">

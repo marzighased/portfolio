@@ -18,7 +18,7 @@
     background-image: url('./../../../assets/images/19.\ Skill\ set\ Background.png');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; 
     opacity: 0.9;
     z-index: -1;
   }
@@ -220,6 +220,16 @@
 }
 
 
+@media (min-width: 1441px) {
+  .skills-section {
+    align-items: center;
+    
+    .content-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+  }
+}
 
 
 @media (max-width: 1440px) {
@@ -258,6 +268,18 @@
     }
   }
 }
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+  .skills-section {
+    align-items: center;
+    
+    .content-wrapper {
+      margin: 0 auto;
+      max-width: 1200px;
+    }
+  }
+}
+
 
 @media (max-width: 1024px) {
   .skills-section {
