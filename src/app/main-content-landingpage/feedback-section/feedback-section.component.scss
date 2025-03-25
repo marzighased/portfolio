@@ -2,12 +2,18 @@
 
 :host {
   display: block;
+  width: 100%;  
 }
 
 .feedback-section {
   padding-top: 80px;
+  display: flex;           
+  flex-direction: column;  
+  width: 100%;             
   
-  .testimonials-container {    
+  .testimonials-container {
+    width: 100%;           
+    
     .section-title {
       @include fira;
       color: #3ed0b2;
@@ -17,9 +23,10 @@
       margin-top: 16px;
     }
     
-    .testimonials-slider {  
+    .testimonials-slider {   
       position: relative;
       height: 400px;
+      width: 100%;          
       
       .testimonials-track {
         position: relative;
@@ -371,6 +378,101 @@
         &.active {
           width: calc(100% - 32px);  
           height: auto;
+          max-width: 320px;      
+          padding: 16px;         
+        }
+        
+        .author {
+          gap: 8px;              
+          
+          &:before {
+            width: 100px;        
+          }
+        }
+      }
+      
+      .navigation {
+        top: 280px;             
+        width: 100%;             
+        justify-content: center; 
+      }
+    }
+  }
+}
+
+
+@media (max-width: 380px) {
+  .feedback-section {
+    .testimonials-slider {
+      height: 320px;             
+      
+      .testimonial-card {
+        &.active {
+          width: 90%;             
+          max-width: 280px;       
+          padding: 10px 12px;     
+          min-height: 150px;      
+          height: auto;           
+          transform: translate(-50%, -50%) scale(0.9); 
+        }
+        
+        .text {
+          font-size: 12px;       
+          line-height: 1.3;       
+          margin-bottom: 8px;     
+        }
+        
+        .author {
+          flex-wrap: wrap;       
+          gap: 5px;               
+          
+          &:before {
+            width: 50px;          
+          }
+          
+          .name {
+            font-size: 13px;      
+          }
+          
+          .role {
+            font-size: 10px;     
+            margin-left: -10px;   
+          }
+        }
+        
+        .quote {
+          position: absolute;
+          left: 0;                
+          top: -18px;             
+          transform: scale(0.7);  
+          transform-origin: bottom left; 
+          
+          img {
+            width: 35px;         
+          }
+        }
+      }
+      
+      .navigation {
+        top: 230px;             
+        gap: 6px;                
+        
+        .nav-btn {
+          padding: 3px;        
+          
+          img {
+            width: 18px;         
+            height: 18px;
+          }
+        }
+        
+        .indicators {
+          gap: 6px;              
+          
+          .indicator {
+            width: 5px;         
+            height: 5px;
+          }
         }
       }
     }
