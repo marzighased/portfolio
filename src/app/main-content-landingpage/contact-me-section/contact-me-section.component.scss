@@ -13,30 +13,33 @@
     
     .text-column {
       max-width: 470px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
       
       .subtitle {
         @include karla;
         color: #3ed0b2;
         font-size: 25px;
-        margin-bottom: 16px;
       }
       
       .title {
         @include fira;
         color: #3ed0b2;
         font-size: 64px;
-        margin-bottom: 32px;
         line-height: 1.2;
       }
 
       .intro-text {
-        margin-bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        margin-top: 16px; 
 
         .problem-text {
           @include fira;
           color: #3ed0b2;
           font-size: 20px;
-          margin-bottom: 24px;
           font-weight: 600;
         }
 
@@ -45,7 +48,6 @@
           color: #E5E5E5;
           font-size: 16px;
           line-height: 1.6;
-          margin-bottom: 24px;
         }
 
         .developer-text {
@@ -57,10 +59,8 @@
             color: #3ed0b2;
             text-decoration: none;
             white-space: nowrap;
-            transition: color 0.3s ease;  
+            transition: color 0.3s ease;   
             margin-left: 5px;
-            
-
           }
         }
       }
@@ -70,6 +70,7 @@
       flex: 1;
       max-width: 600px;
       position: relative;
+      margin-top: 20px; 
       
       .input-line {
         position: absolute;
@@ -81,14 +82,18 @@
       }
       
       .form-content {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        
         .form-group {
-          margin-bottom: 50px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
           
           label {
             @include fira;
             color: #3ed0b2;
-            display: block;
-            margin-bottom: 10px;
             font-size: 25px;
           }
           
@@ -123,13 +128,15 @@
           @include karla;
           color: #ff4444;
           font-size: 14px;
-          margin-top: 8px;
+          margin-top: 8px; 
           opacity: 0;
           animation: fadeIn 0.3s ease forwards;
         }
         
         .privacy-policy {
-          margin-bottom: 32px;
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
           
           .checkbox-container {
             @include karla;
@@ -192,26 +199,19 @@
             }
           }
         }
-
-        .form-group:last-of-type {
-            margin-bottom: 32px; 
+  
+        .submit-btn-wrapper {
+          display: flex;
+          justify-content: center;
+          padding-left: 30px;
+          margin-top: 10px; 
         }
   
-          .submit-btn-wrapper {
-            display: flex;
-            justify-content: center;
-            padding-left: 30px; 
-        }
-  
-        
         .submit-btn {
           @include base-button;
           position: relative;
           overflow: hidden;
           padding: 13px 23px;
-          margin-top: 10px;
-          
-          
           
           .button-text {
             display: inline-block;
@@ -255,18 +255,19 @@
       max-width: 400px;
       width: 90%;
       animation: slideUp 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
   
       h3 {
         @include fira;
         color: #3ed0b2;
         font-size: 24px;
-        margin-bottom: 16px;
       }
   
       p {
         @include karla;
         color: #E5E5E5;
-        margin-bottom: 24px;
         font-size: 16px;
       }
   
@@ -274,6 +275,7 @@
         @include base-button;
         padding: 10px 30px;
         font-size: 16px;
+        margin-top: 8px;
         
         &:hover {
           border-color: #3ed0b2;
@@ -302,7 +304,6 @@
       opacity: 1;
     }
   }
-  
 }
 
 @keyframes fadeIn {
@@ -316,7 +317,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1285px) { 
   .contact-me-section {
     padding: 48px;
     
@@ -336,11 +337,22 @@
   .contact-me-section {
     padding: 32px;
 
-
     .content-wrapper {
+      gap: 32px;
+      
       .text-column {
         .title {
           font-size: 48px;
+        }
+        
+        .intro-text {
+          gap: 16px;
+        }
+      }
+      
+      .form-column {
+        .form-content {
+          gap: 32px;
         }
       }
     }
@@ -350,42 +362,47 @@
     font-size: 14px; 
     gap: 8px;
   }
-
-
-
 }
-
 
 @media (max-width: 480px) {
   .contact-me-section {
     padding: 24px;
     
     .content-wrapper {
+      gap: 24px;
+      
       .text-column {
         .title {
           font-size: 40px;
         }
       }
+      
+      .form-column {
+        .form-content {
+          gap: 24px;
+        }
+      }
     }
 
     .success-modal {
-        .modal-content {
-          width: 85%;
-          padding: 24px;
-    
-          h3 {
-            font-size: 20px;
-          }
-    
-          p {
-            font-size: 14px;
-          }
-    
-          .ok-btn {
-            padding: 8px 24px;
-            font-size: 14px;
-          }
+      .modal-content {
+        width: 85%;
+        padding: 24px;
+        gap: 12px;
+  
+        h3 {
+          font-size: 20px;
+        }
+  
+        p {
+          font-size: 14px;
+        }
+  
+        .ok-btn {
+          padding: 8px 24px;
+          font-size: 14px;
         }
       }
+    }
   }
 }
