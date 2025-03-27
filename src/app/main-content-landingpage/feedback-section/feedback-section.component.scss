@@ -375,6 +375,11 @@
     padding-top: 30px;
     
     .testimonials-container {
+      .section-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+        padding: 0 10px; 
+      }
       .testimonials-slider {
         .testimonial-card {
           &.active {
@@ -408,6 +413,10 @@
 @media (max-width: 380px) {
   .feedback-section {
     .testimonials-container {
+      .section-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
       .testimonials-slider {
         height: 320px;    
         
@@ -496,6 +505,10 @@
 @media (max-width: 320px) {
   .feedback-section {
     .testimonials-container {
+      .section-title {
+        font-size: 18px;
+        margin-bottom: 12px;
+      }
       .testimonials-slider {
         height: 300px;
         
