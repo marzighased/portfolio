@@ -110,6 +110,7 @@
 .privacy-section {
   min-height: 100vh;
   padding: 120px 120px 60px;
+  scroll-margin-top: 90px;
   
   .content-wrapper {
     max-width: 1200px;
@@ -120,6 +121,7 @@
       color: #3ed0b2;
       font-size: 48px;
       margin-bottom: 48px;
+      margin-top: 30px;
     }
     
     .privacy-content {
@@ -180,6 +182,7 @@
     .content-wrapper {
       h1 {
         font-size: 36px;
+        margin-top: 40px;
       }
       
       .privacy-content {
@@ -209,7 +212,7 @@
           gap: 16px;
   
           .back-btn {
-            padding: 8px 16px;
+            padding: 8px 16px; 
             font-size: 14px;
           }
         }
@@ -230,6 +233,18 @@
           .language-switch {
             display: none;
           }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .privacy-section {
+      padding: 120px 20px 40px;
+      
+      .content-wrapper {
+        h1 {
+          margin-top: 50px; 
         }
       }
     }
