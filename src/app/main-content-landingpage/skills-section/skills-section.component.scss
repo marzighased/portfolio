@@ -256,7 +256,7 @@
     .skills-grid {
       width: 100%;
       max-width: 800px; 
-      grid-template-columns: repeat(4, 1fr); 
+      grid-template-columns: repeat(4, 1fr);  
       gap: 28px;
       
       .skill-item {
@@ -276,6 +276,15 @@
     .content-wrapper {
       margin: 0 auto;
       max-width: 1200px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .skills-section {
+    .title {
+      text-align: center;
+      width: 100%;
     }
   }
 }

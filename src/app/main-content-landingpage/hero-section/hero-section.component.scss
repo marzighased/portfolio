@@ -229,6 +229,7 @@
   align-items: center;
   justify-content:center;
   
+  
   .side-line.right {
     width: 1px;
     height: 180px;
@@ -337,7 +338,7 @@
   
   &.left {
     left: 150px;
-    z-index: 1;
+    z-index: 2;
     
     .vertical-line {
       height: 250px;
@@ -414,6 +415,7 @@
   padding: 15px 0;
   transform: rotate(-3deg);
   background: rgba(240, 233, 233, 0.1);
+  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   z-index: 3;
 }
@@ -502,19 +504,7 @@
       right: 40px;
     }
 
-    .side-line {
-      display: block !important;
-      
-      &.left {
-        z-index: -1;
-        
-        .vertical-line {
-          z-index: 1;
-        }
-        
-        
-      }
-    }
+    
   }
 }
 
@@ -609,11 +599,9 @@
       
       &.left {
         left: 60px;
-        z-index: -1;
         
         .vertical-line {
           height: 150px;
-          z-index: 1;
         }
         
         .capsule {
@@ -691,7 +679,7 @@
         right: 25px;
         top: auto;
         bottom: 170px;
-        z-index: 20;
+        z-index: 1;
         
         .side-line.right {
           display: none !important;
@@ -717,11 +705,9 @@
           position: absolute;
           left: 60px;
           bottom: 0;
-          z-index: 1;
           
           .vertical-line {
             height: 180px;
-            z-index: 1;
           }
           
           .capsule {
@@ -859,7 +845,7 @@
       }
       
       .name {
-        font-size: 45px;
+        font-size: 45px; 
       }
       
       .right-elements-container {
@@ -884,11 +870,9 @@
         &.left {
           left: 60px;
           bottom: 0;
-          z-index: 1;
           
           .vertical-line {
             height: 180px;
-            z-index: 1;
           }
           
           .capsule {
@@ -973,11 +957,6 @@
         &.left {
           left: 40px;
           bottom: 0;
-          z-index: 1;
-
-          .vertical-line {
-            z-index: 1;
-          }
           
           .capsule {
             width: 20px;
@@ -1054,11 +1033,6 @@
         &.left {
           left: 40px;
           bottom: 0;
-          z-index: 1;
-
-          .vertical-line {
-            z-index: 1;
-          }
           
           .capsule {
             width: 20px;
@@ -1093,7 +1067,7 @@
         right: 15px;
         bottom: 120px;
         top: auto;
-        z-index: 20;
+        z-index: 1;
       }
       
       .social-links {
@@ -1126,12 +1100,9 @@
         &.left {
           position: absolute;
           left: 20px;
-          bottom: 120px;
-          z-index: 1;
           
           .vertical-line {
-            height: 50px;
-            z-index: 1;
+            height: 120px;
           }
           
           .capsule {
@@ -1159,7 +1130,7 @@
     .scrolling-banner {
       position: absolute;
       bottom: 15px;
-      z-index: 10;
+      z-index: 3;
       width: 100%;
     }
   }
