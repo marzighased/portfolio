@@ -10,7 +10,7 @@
                  [class.left]="isLeft(testimonial.id - 1)"
                  [class.right]="isRight(testimonial.id - 1)">
               <div class="quote">
-                <img src="./../../../assets/icons/quotes.svg" alt="Quote"> 
+                <img src="./assets/icons/quotes.svg" alt="Quote"> 
               </div>
               <p class="text">{{testimonial.textKey | translate }}</p>
               <div class="author">
@@ -23,7 +23,7 @@
         
         <div class="navigation">
           <button class="nav-btn prev" (click)="prevSlide()">
-            <img src="./../../../assets/icons/arrow_back.png" alt="Previous">
+            <img src="./assets/icons/arrow_back.png" alt="Previous">
           </button>
           
           <div class="indicators">
@@ -36,7 +36,7 @@
           </div>
           
           <button class="nav-btn next" (click)="nextSlide()">
-            <img src="./../../../assets/icons/arrow_forward.png" alt="Next">
+            <img src="./assets/icons/arrow_forward.png" alt="Next">
           </button>
         </div>
       </div>

@@ -14,7 +14,7 @@
                     <div class="content">
                         <div class="project-title">
                             {{ project.titleKey | translate }}
-                            <img src="./../../../assets/icons/arrow_outward.png" alt="arrow" class="arrow-icon">
+                            <img src="./assets/icons/arrow_outward.png" alt="arrow" class="arrow-icon">
                         </div>
                         <div class="technologies">
                             @for (tech of project.technologies; track tech) {
@@ -37,8 +37,8 @@
             <div class="modal-overlay" (click)="closeModal()">
                 <div class="modal-content" (click)="$event.stopPropagation()">
                     <button class="close-btn" (click)="closeModal()">
-                        <img src="./../../../assets/icons/close_small.png" alt="Close" class="icon-white">
-                        <img src="./../../../assets/icons/close.png" alt="Close" class="icon-green">
+                        <img src="./assets/icons/close_small.png" alt="Close" class="icon-white">
+                        <img src="./assets/icons/close.png" alt="Close" class="icon-green">
                     </button>
 
                     <div class="project-details">
@@ -53,18 +53,18 @@
 
                             <div class="tech-stack">
                                 @for (tech of selectedProject.technologies; track tech) {
-                                    <img src="./../../../assets/green icons/Property 1={{ tech }}.svg" [alt]="tech">
+                                    <img src="./assets/green icons/Property 1={{ tech }}.svg" [alt]="tech">
                                 }
                             </div>
 
                             <div class="action-buttons">
                                 <a [href]="selectedProject.githubLink" target="_blank" class="btn">
                                     GitHub
-                                    <img src="./../../../assets/icons/arrow_outward.svg" alt="arrow">
+                                    <img src="./assets/icons/arrow_outward.svg" alt="arrow">
                                 </a>
                                 <a [href]="selectedProject.liveLink" target="_blank" class="btn">
                                     {{ 'PROJECTS.LIVE' | translate }}
-                                    <img src="./../../../assets/icons/arrow_outward.svg" alt="arrow">
+                                    <img src="./assets/icons/arrow_outward.svg" alt="arrow">
                                 </a>
                             </div>
                         </div>
@@ -75,7 +75,7 @@
 
                         <button class="next-project" (click)="nextProject()">
                             {{ 'PROJECTS.NEXT' | translate }}
-                            <img src="./../../../assets/icons/arrow_forward.png" alt="arrow">
+                            <img src="./assets/icons/arrow_forward.png" alt="arrow">
                         </button>
                     </div>
                 </div>
