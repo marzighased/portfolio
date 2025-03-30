@@ -10,7 +10,7 @@
         
         <div class="projects-list">
             @for (project of projects; track project.id) {
-                <div class="project-item" (click)="openProjectModal(project)"> 
+                <div class="project-item" (click)="openProjectModal(project)">  
                     <div class="content">
                         <div class="project-title">
                             {{ project.titleKey | translate }}

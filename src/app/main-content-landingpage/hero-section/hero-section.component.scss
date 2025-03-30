@@ -402,7 +402,7 @@
     transform: translate3d(0, 0, 0);
   }
   100% {
-    transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
   }
 }
 
@@ -412,10 +412,9 @@
   overflow: hidden;
   bottom: 50px;
   left: 0;
-  padding: 15px 0;
+  padding: 15px;
   transform: rotate(-3deg);
   background: rgba(240, 233, 233, 0.1);
-  -webkit-backdrop-filter: blur(2px);
   backdrop-filter: blur(2px);
   z-index: 3;
 }
@@ -423,6 +422,7 @@
 .infinite-marquee {
   display: flex;
   animation: marquee 20s linear infinite;
+  width: 88%;
 }
 
 .marquee-content {
@@ -432,8 +432,8 @@
   width: max-content;
   
   span {
+    @include karla;
     color: #3ed0b2;
-    font-family: 'Karla';
     padding: 0 16px;
     font-size: 30px;
     

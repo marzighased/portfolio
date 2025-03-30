@@ -35,7 +35,7 @@ export class ProjectsOverviewSectionComponent {
       thumbnail: './../../../assets/images/join.jpg', 
       technologies: ['Angular', 'TypeScript', 'HTML', 'CSS', 'Firebase'],
       githubLink: 'https://github.com/marzighased?tab=repositories',
-      liveLink: 'https://marzighased.de/join',
+      liveLink: 'https://join.marzighased.de',
       modalImage: './../../../assets/images/join.jpg' 
     },
     {
@@ -45,7 +45,7 @@ export class ProjectsOverviewSectionComponent {
       thumbnail: './../../../assets/images/elpollo.jpg',
       technologies: ['HTML', 'CSS', 'JavaScript'],
       githubLink: 'https://github.com/marzighased/El-pollo-loco',
-      liveLink: 'https://marzighased/el-pollo-loco',
+      liveLink: 'https://elpolloloco.marzighased.de',
       modalImage: './../../../assets/images/elpollo.jpg' 
     },
     {
@@ -72,7 +72,7 @@ export class ProjectsOverviewSectionComponent {
 
   nextProject(): void {
     if (this.selectedProject) {
-      const currentIndex = this.projects.findIndex(p => p.id === this.selectedProject?.id);
+      const currentIndex = this.projects.findIndex(p => p.id === this.selectedProject?.id); 
       const nextIndex = (currentIndex + 1) % this.projects.length;
       this.selectedProject = this.projects[nextIndex];
     }
