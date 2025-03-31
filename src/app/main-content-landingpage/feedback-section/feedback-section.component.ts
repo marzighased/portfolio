@@ -22,19 +22,19 @@ export class FeedbackSectionComponent {
     {
       id: 1,
       textKey: "FEEDBACK.TESTIMONIAL1.TEXT",
-      author: "T.Schulz",
+      author: "Marco Gollmer",
       roleKey: "FEEDBACK.TESTIMONIAL1.ROLE"
     },
     {
       id: 2,
       textKey: "FEEDBACK.TESTIMONIAL2.TEXT",
-      author: "H.Janisch",
+      author: "Ismail Baris",
       roleKey: "FEEDBACK.TESTIMONIAL2.ROLE"
     },
     {
       id: 3,
       textKey: "FEEDBACK.TESTIMONIAL3.TEXT",
-      author: "S.Miller",
+      author: "Normann Blum",
       roleKey: "FEEDBACK.TESTIMONIAL3.ROLE"
     }
   ];

@@ -11,7 +11,7 @@
   flex-direction: column;  
   width: 100%;             
   
-  .testimonials-container {
+  .testimonials-container { 
     width: 100%;           
     
     .section-title {
@@ -114,12 +114,14 @@
             display: flex;  
             align-items: center;  
             justify-content: flex-end;
-            gap: 15px;  
+            gap: 5px; 
+            width: 100%; 
             
             &:before {  
               content: '';
               height: 2px;
-              width: 320px;  
+              max-width: 320px;
+              flex: 1;
               background-color: #9e9a9a; 
             }
           
@@ -128,7 +130,8 @@
                color: #E5E5E5;
                font-size: 18px;
                display: inline-block;
-               margin-right: 3px;
+               margin-right: 0;
+               white-space: nowrap;
               }
           
              .role {
@@ -136,7 +139,9 @@
                color: #E5E5E5;
                opacity: 0.8;
                font-size: 14px;
-               margin-left: -15px;
+               margin-left: 0;
+               display: inline-block;
+               white-space: nowrap;
               }
             
         }  

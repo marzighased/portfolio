@@ -57,16 +57,16 @@
     "FEEDBACK": {
       "TITLE": "Was meine Kollegen über mich sagen",
       "TESTIMONIAL1": {
-      "TEXT": "Ich habe effizient mit Marzi zusammengearbeitet",
+      "TEXT": "Marzieh ist eine wirklich angenehme und freundliche Teamkollegin. Sie ist leicht anzusprechen und immer offen für eine konstruktive Diskussion über Probleme. Egal, ob es um Arbeitsangelegenheiten geht oder nur um einen kurzen Plausch. sie schafft eine positive Atmosphäre und macht die Teamarbeit reibungslos und angenehm.",
       "ROLE": "Frontend-Entwickler"
      },
       "TESTIMONIAL2": {
-      "TEXT": "Marzi hat sich als zuverlässige Gruppenpartnerin erwiesen. Ihre technischen Fähigkeiten und proaktive Herangehensweise waren entscheidend für den Erfolg unseres Projekts.",
-      "ROLE": "Team-Partner"
+      "TEXT": "Marzi bringt nicht nur fachliches Know-how mit, sondern auch eine Menge Teamgeist. Ihre effiziente Herangehensweise hat uns oft geholfen, schnell gute Lösungen zu finden.",
+      "ROLE": "Frontend-Entwickler"
      },
       "TESTIMONIAL3": {
-      "TEXT": "Ich hatte das Glück, mit Marzi an einem Projekt in der Developer Academy zu arbeiten. Sie hat sich bei jeder Aufgabe, die wir gemeinsam bearbeitet haben, sehr engagiert und blieb während des gesamten Projekts fokussiert.",
-      "ROLE": "Projektmanager"
+      "TEXT": "Mit Marzi zu arbeiten, war eine schöne Erfahrung! Sie ist unglaublich fleißig, wissbegierig und stets motiviert, sich weiterzuentwickeln. Ihre offene und lockere Art macht die Zusammenarbeit besonders angenehm und ihre starke Kommunikationsfähigkeit hat stets für einen reibungslosen Austausch gesorgt.",
+      "ROLE": "Frontend-Entwickler"
      }
     },
     "CONTACT": {
