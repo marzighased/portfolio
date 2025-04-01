@@ -6,7 +6,7 @@
 }
 
 .feedback-section {
-  padding-top: 80px;
+  padding-top: 120px;
   display: flex;           
   flex-direction: column;  
   width: 100%;             
@@ -106,6 +106,21 @@
           margin-bottom: 32px;
           overflow-y: auto;
           flex: 1;
+
+          &::-webkit-scrollbar {
+            width: 3px; 
+          }
+          
+          &::-webkit-scrollbar-track {
+            background: rgba(33, 67, 55, 0.1); 
+            border-radius: 10px; 
+          }
+          
+          &::-webkit-scrollbar-thumb {
+            background: #9e9a9a; 
+            border-radius: 10px;
+          }
+          
         }
         
         .author {
@@ -265,9 +280,7 @@
 
 
 @media (max-width: 1400px) {
-  .feedback-section {
-    padding-top: 60px;
-    
+  .feedback-section {    
     .testimonials-container {
       .testimonials-slider {
         .testimonial-card {
@@ -287,9 +300,7 @@
 }
 
 @media (max-width: 768px) { 
-  .feedback-section {
-    padding-top: 40px;
-    
+  .feedback-section {    
     .testimonials-container {
       .section-title {
         font-size: 28px;
@@ -376,9 +387,7 @@
 }
 
 @media (max-width: 480px) {
-  .feedback-section {
-    padding-top: 30px;
-    
+  .feedback-section {    
     .testimonials-container {
       .section-title {
         font-size: 24px;
