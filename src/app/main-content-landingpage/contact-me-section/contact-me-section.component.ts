@@ -16,7 +16,7 @@ export class ContactMeSectionComponent {
   showPrivacyError = false;
   showSuccessModal = false;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder) { 
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],

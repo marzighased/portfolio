@@ -9,6 +9,6 @@ export const routes: Routes = [
     },
     {
         path: 'impressum',
-        component: PrivacyPolicyComponent
+        component: PrivacyPolicyComponent 
     }
 ];
