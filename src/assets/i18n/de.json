@@ -49,9 +49,9 @@
       "TITLE": "El Pollo Loco",
       "DESCRIPTION": "Jump-and-Run-Spiel basierend auf objektorientierter Programmierung."
      },
-     "BUBBLE": {
-      "TITLE": "DA Bubble",
-      "DESCRIPTION": "Angular-basierte Chat-Anwendung mit Echtzeit-Messaging."
+     "POKEDEX": {
+      "TITLE": "POKEDEX",
+      "DESCRIPTION": "Pokedex-Webanwendung: REST API-gestützte Plattform zur Anzeige und Suche von Pokemon."
      }
     },
     "FEEDBACK": {

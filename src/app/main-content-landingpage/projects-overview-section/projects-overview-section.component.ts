@@ -50,13 +50,13 @@ export class ProjectsOverviewSectionComponent {
     },
     {
       id: 3,
-      titleKey: 'PROJECTS.BUBBLE.TITLE',
-      descriptionKey: 'PROJECTS.BUBBLE.DESCRIPTION',
-      thumbnail: './../../../assets/images/bubble.jpg',
-      technologies: ['Angular', 'Firebase', 'TypeScript'],
+      titleKey: 'PROJECTS.POKEDEX.TITLE',
+      descriptionKey: 'PROJECTS.Pokedex.DESCRIPTION',
+      thumbnail: './../../../assets/images/pk.png',
+      technologies: ['JavaScript', 'HTML', 'CSS'],
       githubLink: 'https://github.com/marzighased?tab=repositories',
-      liveLink: 'https://marzighased.de/da-bubble',
-      modalImage: './../../../assets/images/bubble.jpg'
+      liveLink: 'https://pokedex.marzighased.de',
+      modalImage: './../../../assets/images/pk.png'
     }
   ];
 
