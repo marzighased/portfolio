@@ -51,7 +51,7 @@ export class ProjectsOverviewSectionComponent {
     {
       id: 3,
       titleKey: 'PROJECTS.POKEDEX.TITLE',
-      descriptionKey: 'PROJECTS.Pokedex.DESCRIPTION',
+      descriptionKey: 'PROJECTS.POKEDEX.DESCRIPTION',
       thumbnail: './../../../assets/images/pk.png',
       technologies: ['JavaScript', 'HTML', 'CSS'],
       githubLink: 'https://github.com/marzighased?tab=repositories',
