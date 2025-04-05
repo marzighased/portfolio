@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { EmailService } from '../../services/email.service';
 
 @Component({
   selector: 'app-contact-me-section',
@@ -15,8 +16,9 @@ export class ContactMeSectionComponent {
   contactForm: FormGroup;
   showPrivacyError = false;
   showSuccessModal = false;
+  isSubmitting = false;
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder, private emailService: EmailService) { 
     this.contactForm = this.fb.group({
       name: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
@@ -33,10 +35,22 @@ export class ContactMeSectionComponent {
 
   onSubmit() {
     if (this.contactForm.valid) {
-      console.log('Form submitted:', this.contactForm.value);
-      this.showSuccessModal = true;
-      this.contactForm.reset();
-      this.showPrivacyError = false;
+      this.isSubmitting = true;
+      
+      this.emailService.sendEmail(this.contactForm.value).subscribe({
+        next: (response) => {
+          console.log('Success:', response);
+          this.isSubmitting = false;
+          this.showSuccessModal = true;
+          this.contactForm.reset();
+          this.showPrivacyError = false;
+        },
+        error: (error) => {
+          console.error('Error:', error);
+          this.isSubmitting = false;
+          alert('Error sending message. Please try again later.');
+        }
+      });
     } else {
       this.markFormGroupTouched(this.contactForm);
       if (!this.contactForm.get('privacyPolicy')?.value) {
