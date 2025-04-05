@@ -1,43 +1,69 @@
 <?php
-switch ($_SERVER['REQUEST_METHOD']) {
-    case ("OPTIONS"): //Allow preflighting to take place.
-        header("Access-Control-Allow-Origin: *");
-        header("Access-Control-Allow-Methods: POST");
-        header("Access-Control-Allow-Headers: content-type");
-        exit;
-    case("POST"): //Send the email;
-        header("Access-Control-Allow-Origin: *");
-        // Payload is not send to $_POST Variable,
-        // is send to php:input as a text
-        $json = file_get_contents('php://input');
-        //parse the Payload from text format to Object
-        $params = json_decode($json);
-        
-        $email = $params->email;
-        $name = $params->name;
-        $message = $params->message;
-        
-        $recipient = 'marzighased@gmail.com';
-        $subject = "Contact From <$email>";
-        $message = "From:" . $name . "<br>" . $message;
-        
-        $headers   = array();
-        $headers[] = 'MIME-Version: 1.0';
-        $headers[] = 'Content-type: text/html; charset=utf-8';
-        
-        // Additional headers
-        $headers[] = "From: noreply@marzighased.de";
-        
-        $mail_sent = mail($recipient, $subject, $message, implode("\r\n", $headers));
-        
-        if ($mail_sent) {
-            echo json_encode(['success' => true, 'message' => 'Email sent successfully']);
-        } else {
-            echo json_encode(['success' => false, 'message' => 'Failed to send email']);
-        }
-        
-        break;
-    default: //Reject any non POST or OPTIONS requests.
-        header("Allow: POST", true, 405);
-        exit;
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type");
+header("Content-Type: application/json");
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    exit(0);
+}
+
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo json_encode(['success' => false, 'message' => 'Only POST method is allowed']);
+    exit;
+}
+
+$input = file_get_contents('php://input');
+$data = json_decode($input);
+
+if (!$data || !isset($data->name) || !isset($data->email) || !isset($data->message)) {
+    echo json_encode(['success' => false, 'message' => 'Missing required fields']);
+    exit;
+}
+
+$name = $data->name;
+$email = $data->email;
+$message = $data->message;
+
+$to = 'marzighased@gmail.com';
+
+$subject = "Contact From: $name <$email>";
+
+$email_content = "
+<html>
+<head>
+  <title>New Contact Message</title>
+</head>
+<body>
+  <h2>New Contact Message</h2>
+  <p><strong>Name:</strong> $name</p>
+  <p><strong>Email:</strong> $email</p>
+  <p><strong>Message:</strong><br>$message</p>
+</body>
+</html>
+";
+
+$headers = "MIME-Version: 1.0\r\n";
+$headers .= "Content-type: text/html; charset=UTF-8\r\n";
+$headers .= "From: noreply@marzighased.de\r\n";
+$headers .= "Reply-To: $email\r\n";
+
+error_log("Attempting to send email from $name <$email> to $to");
+
+$mail_sent = mail($to, $subject, $email_content, $headers);
+
+error_log("Mail sending result: " . ($mail_sent ? "Success" : "Failed"));
+
+if ($mail_sent) {
+    echo json_encode(['success' => true, 'message' => 'Email sent successfully']);
+} else {
+    $error = error_get_last();
+    echo json_encode([
+        'success' => false, 
+        'message' => 'Failed to send email. Please try again later.',
+        'error' => $error ? $error['message'] : 'Unknown error'
+    ]);
 }
