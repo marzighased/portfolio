@@ -32,7 +32,7 @@
       "NEED_SKILL": "Benötigen Sie",
       "NEED_ANOTHER": "andere Fähigkeit?",
       "CONTACT": "Kontaktieren Sie mich gerne. Ich freue mich darauf, mein bisheriges Wissen zu erweitern.",
-      "LETS_TALK": "Lass uns reden"
+      "LETS_TALK": "Lassen Sie uns reden"
     },
     "PROJECTS": {
       "TITLE": "Portfolio",
@@ -71,11 +71,11 @@
     },
     "CONTACT": {
       "TITLE": "Kontakt",
-      "SUBTITLE": "Lass uns zusammen arbeiten",
+      "SUBTITLE": "Lassen Sie uns zusammen arbeiten",
       "PROBLEM": "Haben Sie ein Problem zu lösen?",
       "DESCRIPTION": "Kontaktieren Sie mich über dieses Formular. Ich interessiere mich dafür, von Ihnen zu hören, Ihre Ideen kennenzulernen und mit meiner Arbeit zu Ihren Projekten beizutragen.",
       "NEED_DEV": "Brauchen Sie einen Frontend-Entwickler?",
-      "LETS_TALK": "Lass uns reden!",
+      "LETS_TALK": "Lassen Sie uns reden!",
       "FORM": {
         "NAME": "Wie heißen Sie?",
         "NAME_PLACEHOLDER": "Ihr Name",
